@@ -56,11 +56,11 @@
 .about-grid {
   margin-top: -250px;
   --num-cols: 2;
-  --row-height: 200px;
+  --row-height: 180px;
   box-sizing: border-box;
 	padding: var(--gap);
-  padding-left: 300px;
-  padding-right: 300px;
+  padding-left: 400px;
+  padding-right: 400px;
 
 	display: grid;
 	grid-template-columns: repeat(var(--num-cols), 1fr);

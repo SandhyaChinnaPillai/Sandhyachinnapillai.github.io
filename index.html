@@ -9,77 +9,12 @@
   <meta name="viewport"
     content="user-scalable=0, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-  <!-- support facebook moderation -->
-  <meta property="fb:admins" content="129982580378550">
-  <meta property="fb:app_id" content="129982580378550">
-
-  <!-- KILL SKYPE ADD ON -->
-  <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
-
-  <script src="https://browser.sentry-cdn.com/4.6.2/bundle.min.js"></script>
-  <script id="sentry">
-    (function (c, t, u, n, p, l, y, z, v) {
-      function e(b) { if (!w) { w = !0; var d = t.getElementsByTagName(u)[0], a = t.createElement(u); a.src = z; a.crossorigin = "anonymous"; a.addEventListener("load", function () { try { c[n] = q; c[p] = r; var a = c[l], d = a.init; a.init = function (a) { for (var b in a) Object.prototype.hasOwnProperty.call(a, b) && (v[b] = a[b]); d(v) }; B(b, a) } catch (A) { console.error(A) } }); d.parentNode.insertBefore(a, d) } } function B(b, d) {
-        try {
-          for (var a = 0; a < b.length; a++)if ("function" === typeof b[a]) b[a](); var f = m.data, g = !1, h = !1; for (a = 0; a < f.length; a++)if (f[a].f) {
-            h =
-              !0; var e = f[a]; !1 === g && "init" !== e.f && d.init(); g = !0; d[e.f].apply(d, e.a)
-          } !1 === h && d.init(); var k = c[n], l = c[p]; for (a = 0; a < f.length; a++)f[a].e && k ? k.apply(c, f[a].e) : f[a].p && l && l.apply(c, [f[a].p])
-        } catch (C) { console.error(C) }
-      } for (var g = !0, x = !1, k = 0; k < document.scripts.length; k++)if (-1 < document.scripts[k].src.indexOf(y)) { g = "no" !== document.scripts[k].getAttribute("data-lazy"); break } var w = !1, h = [], m = function (b) { (b.e || b.p || b.f && -1 < b.f.indexOf("capture") || b.f && -1 < b.f.indexOf("showReportDialog")) && g && e(h); m.data.push(b) };
-      m.data = []; c[l] = { onLoad: function (b) { h.push(b); g && !x || e(h) }, forceLoad: function () { x = !0; g && setTimeout(function () { e(h) }) } }; "init addBreadcrumb captureMessage captureException captureEvent configureScope withScope showReportDialog".split(" ").forEach(function (b) { c[l][b] = function () { m({ f: b, a: arguments }) } }); var q = c[n]; c[n] = function (b, d, a, f, e) { m({ e: [].slice.call(arguments) }); q && q.apply(c, arguments) }; var r = c[p]; c[p] = function (b) { m({ p: b.reason }); r && r.apply(c, arguments) }; g || setTimeout(function () { e(h) })
-    })(window, document,
-      "script", "onerror", "onunhandledrejection", "Sentry", "20b9cdb407dd4026b2a75c903c719554", "https://browser.sentry-cdn.com/4.6.2/bundle.min.js", { "dsn": "https://20b9cdb407dd4026b2a75c903c719554@sentry.wixpress.com/86" });
-  </script>
   <link rel="stylesheet" href="assets/css/styles.css" />
 
   <script defer=""
     src="https://static.parastorage.com/polyfill/v2/polyfill.min.js?features=es2015,es2016,es2017,fetch&amp;flags=gated&amp;unknown=polyfill&amp;rum=0"></script>
 
   <script type="text/javascript">
-    (function () {
-      function sendBeacon(url) {
-        let sent = false
-        try {
-          sent = navigator.sendBeacon(url)
-        } catch (e) {
-        }
-        if (!sent) {
-          (new Image()).src = url
-        }
-      }
-
-      const urlParams = new URLSearchParams(window.location.search);
-      const origin = urlParams.get('dsOrigin');
-      const editorSessionId = urlParams.get('editorSessionId');
-      const is_rollout = 0;
-      const is_RolloutParam = '&is_rollout=' + is_rollout;
-      const fedOpsAppName = 'tb-ds';
-      window.fedops = window.fedops || {};
-      window.fedops.apps = window.fedops.apps || {};
-      const startLoadTime = Math.round(window.performance && window.performance.now && window.performance.now() || 0)
-      window.fedops.apps[fedOpsAppName] = { startLoadTime };
-      const checkVisibility = {}
-
-      window.wixBiSession = {
-        initialTimestamp: Date.now(),
-        is_rollout: is_rollout,
-        origin: origin,
-        is_dac_rollout: 0,
-        ...(checkVisibility)
-      }
-
-      const userIdParam = '&uuid=d0d7a34b-b6a4-4074-987d-d9d536e0a366'
-      const sessionTagging = '&msid=7aa9fd88-9d11-49ba-804d-3e3c3d4149d1' + userIdParam + '&_visitorId=' + editorSessionId + '&session_id=' + editorSessionId + '&esi=' + editorSessionId;
-      const dm_version = '1.12125.0'
-      const url = '//frog.wix.com/ds-performance?src=72&evid=31&appName=' + fedOpsAppName + sessionTagging + is_RolloutParam + '&origin=' + origin + '&ts=0&ms=' + startLoadTime + '&dm_version=' + dm_version + '&isDraft=false' + '&is_dac_rollout=0' + '&experience=editor2';
-      const suppressBIQueryParam = urlParams.get('suppressbi')
-      const shouldSuppressBI = suppressBIQueryParam === 'true' || suppressBIQueryParam === true
-      if (!shouldSuppressBI) {
-        sendBeacon(url);
-      }
-    })();
-
     function showContent(contentId) {
       // Hide all content divs
       var contentDivs = document.getElementsByClassName('dBAkHi');
@@ -94,27 +29,6 @@
       }
     }
   </script>
-  <script src="https://static.parastorage.com/unpkg-semver/wix-recorder@^1/app.bundle.min.js"></script>
-  <script defer=""
-    src="https://static.parastorage.com/services/document-management/1.12125.0/tb-main/dist/tb-main.js"></script>
-
-  <script type="text/javascript">
-    var clientSideRender = true;
-    var santaBase = 'https://static.parastorage.com/services/santa/1.11783.0';
-    var boltBase = 'https://static.parastorage.com/services/wix-bolt/1.7777.0';
-    var thunderboltBase = 'https://static.parastorage.com/services/wix-thunderbolt/1.12317.0';
-    var dsBoltBase = 'https://static.parastorage.com/services/document-management/1.12125.0';
-    var dmBase = 'https://static.parastorage.com/services/document-management/1.12125.0';
-  </script>
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="https://www.wix.com/favicon.ico">
-
-
-
-  <!-- HTML CLIENT VM - PREVIEW HEAD -->
-  <!-- Ad data -->
 
 
 
@@ -123,49 +37,6 @@
     var siteAsJson = {};
     var renderingMode = "PREVIEW";
   </script>
-  <script src="https://static.parastorage.com/services/third-party/requirejs/2.1.15/require.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="react"
-    src="https://static.parastorage.com/unpkg/react@16.14.0/umd/react.production.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="reactDOM"
-    src="https://static.parastorage.com/unpkg/react-dom@16.14.0/umd/react-dom.production.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lodash"
-    src="https://static.parastorage.com/unpkg/lodash@4.17.21/lodash.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pmrpc"
-    src="https://static.parastorage.com/unpkg/pm-rpc@3.1.0/build/pm-rpc.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="mainScript"
-    src="https://static.parastorage.com/services/document-management/1.12125.0/tb-main/dist/tb-main-internal.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="santa-core-utils"
-    src="https://static.parastorage.com/unpkg/@wix/santa-core-utils@1.2722.0/dist/coreUtils.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ajv"
-    src="https://static.parastorage.com/unpkg/ajv@6.12.6/dist/ajv.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="immutable"
-    src="https://static.parastorage.com/unpkg/immutable@3.8.2/dist/immutable.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="zepto"
-    src="https://static.parastorage.com/unpkg/zepto@1.2.0/dist/zepto.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="platformEvents"
-    src="https://static.parastorage.com/services/js-platform-editor-sdk/1.3407.0/lib/platformEvents.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="platformAPI"
-    src="https://static.parastorage.com/services/js-platform-editor-sdk/1.3407.0/lib/platform-api.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="wixImmutable"
-    src="https://static.parastorage.com/unpkg/@wix/santa-core-utils@1.2722.0/dist/wixImmutable.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="santa-components"
-    src="https://static.parastorage.com/unpkg/@wix/santa-components@1.1984.0/dist/santa-components.prod.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_"
-    data-requiremodule="js-platform-apps-configuration-editor"
-    src="https://static.parastorage.com/services/js-platform-apps-configuration/1.235.0/platform-apps-editor.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="prop-types"
-    src="https://static.parastorage.com/unpkg/@wix/santa-bundle@1.1062.0/dist/bundle.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="color"
-    src="https://static.parastorage.com/unpkg/@wix/santa-external-modules@1.644.0/color-convert/0.2.0/color.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="warmupUtilsLib"
-    src="https://static.parastorage.com/unpkg/@wix/santa-core-utils@1.2722.0/dist/warmupUtils.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="skinUtils"
-    src="https://static.parastorage.com/unpkg/@wix/santa-skin-utils@1.1686.0/dist/skin-utils.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="image-client-api"
-    src="https://static.parastorage.com/unpkg/image-client-api@1.4060.0/dist/imageClientApi.js"></script>
-  <link rel="stylesheet"
-    href="https://static.parastorage.com/services/wix-thunderbolt-ds/dist/main-ds.c21a9616.min.css">
-  <script src="https://static.parastorage.com/services/wix-thunderbolt-ds/dist/main-ds.c0ca915d.bundle.min.js"></script>
   <link rel="stylesheet"
     href="https://static.parastorage.com/services/wix-thunderbolt-ds/dist/main-renderer-ds.59eb9703.min.css">
   <script
@@ -177,19 +48,6 @@
     href="https://static.parastorage.com/services/editor-elements-library/dist/thunderboltPreview/rb_wixui.thunderboltPreview.40234cd5.min.css">
   <link rel="stylesheet" type="text/css"
     href="https://static.parastorage.com/services/editor-elements-design-systems/dist/thunderboltPreview/rb_dsgnsys.thunderboltPreview.7dc1d992.min.css">
-  <script
-    src="https://static.parastorage.com/services/editor-elements-library/dist/thunderboltPreview/rb_wixui.thunderboltPreview.9a23cdc7.bundle.min.js"></script>
-  <script
-    src="https://static.parastorage.com/services/editor-elements-design-systems/dist/thunderboltPreview/rb_dsgnsys.thunderboltPreview.cc625438.bundle.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="wix-base-ui"
-    src="https://static.parastorage.com/unpkg/@wix/wix-base-ui@2.778.0/dist/base-ui.js"></script>
-  <script src="https://static.parastorage.com/unpkg/requirejs-bolt@2.3.6/requirejs.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_"
-    data-requiremodule="https://static.parastorage.com/services/pro-gallery-tpa/1.221.0/WixProGalleryViewerWidget.bundle.min.js"
-    src="https://static.parastorage.com/services/pro-gallery-tpa/1.221.0/WixProGalleryViewerWidget.bundle.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_"
-    data-requiremodule="https://static.parastorage.com/services/pro-gallery-tpa/1.221.0/WixProGalleryViewerWidget.cssConfig.bundle.min.js"
-    src="https://static.parastorage.com/services/pro-gallery-tpa/1.221.0/WixProGalleryViewerWidget.cssConfig.bundle.min.js"></script>
   <link rel="prefetch" href="https://static.parastorage.com/services/pro-gallery-tpa/1.221.0/editorScript.bundle.min.js"
     id="prefetch-editor-5">
   <link rel="prefetch" href="https://static.parastorage.com/services/portfolio-bob/1.692.0/editorScript.bundle.min.js"
@@ -3764,39 +3622,37 @@
                       <img src="assets/images/rajasthanpic.jpg">
                       <div id="" style="background-color: black;">
                         <div class="about-info">
-                          <h1 class="font_4" style="font-size:26px"><span
-                              style="font-size:26px;">Sandhya Chinna Pillai</span>
+                          <h1 class="font_4" style="font-size:26px"><span style="font-size:26px;">Sandhya Chinna
+                              Pillai</span>
                           </h1>
-                          <p class="font_6" style="font-size:20px; margin:10px;"><span
-                              style="font-size:24px;">Software Developer</span></p>
-                          <p class="font_5 " style="font-size:16px; margin:10px;"><span style="font-size:16px"
-                              >Phone: </br> +1(607)697-5734</span></p>
-                          <p class="font_5 " style="font-size:16px; margin:10px;"><span style="font-size:16px"
-                              >Email: </br> pillai.sandhya25@gmail.com</span></p>
+                          <p class="font_6" style="font-size:20px; margin:10px;"><span style="font-size:24px;">Software
+                              Developer</span></p>
+                          <p class="font_5 " style="font-size:16px; margin:10px;"><span style="font-size:16px">Phone:
+                              </br> +1(607)697-5734</span></p>
+                          <p class="font_5 " style="font-size:16px; margin:10px;"><span style="font-size:16px">Email:
+                              </br> pillai.sandhya25@gmail.com</span></p>
                           <p class="font_5 " style="font-size:16px; margin:10px;"><span style="font-size:16px">
-                            Address: </br> 215 Ridgedale Rd </br> Ithaca, NY
-                                14850</span></p>
-                          <p class="font_5 " style="font-size:16px; margin:10px;"><span style="font-size:16px"
-                              >Date of birth: </br> 25th June 1998</span></p>
+                              Address: </br> 215 Ridgedale Rd </br> Ithaca, NY
+                              14850</span></p>
+                          <p class="font_5 " style="font-size:16px; margin:10px;"><span style="font-size:16px">Date of
+                              birth: </br> 25th June 1998</span></p>
                         </div>
 
                       </div>
                     </div>
                     <div class="about-me">
-                      <h2 class="font_2 " style="display: inline-block; margin:35px; font-size:38px; line-height:normal">
-                        <span style="letter-spacing:normal" ><span
-                            style="font-size:38px;" >A Bit About
+                      <h2 class="font_2 "
+                        style="display: inline-block; margin:35px; font-size:38px; line-height:normal">
+                        <span style="letter-spacing:normal"><span style="font-size:38px;">A Bit About
                             Me</span></span>
                       </h2>
                       <p class="font_8" style="font-size:16px; line-height:1.8em">
-                        <span style="letter-spacing:normal;" ><span
-                            style="font-size:16px" >Everybody has a story,
+                        <span style="letter-spacing:normal;"><span style="font-size:16px">Everybody has a story,
                             and your visitors would love to hear yours. This space is a great opportunity
                             to give a full background on who you are and what you have to offer at your
                             next job. Double click on the text box to start editing your content and make
-                            sure to add all the relevant details you want site visitors to know.<br
-                              >
-                            <br >
+                            sure to add all the relevant details you want site visitors to know.<br>
+                            <br>
                             Use this space to talk about how you started and share your professional
                             journey. Explain your core values, your commitment to the workplace, and how
                             you stand out from the crowd. Add a photo, gallery, or video for even more
@@ -3804,39 +3660,54 @@
                       </p>
                     </div>
                     <hr class="horizontal-line">
-                    <h2 class="font_2 " style="display: inline-block; margin-left: 20%; font-size:38px; line-height:normal">
-                      <span style="letter-spacing:normal" ><span
-                          style="font-size:38px;" >Work Experience</span></span>
+                    <h2 class="font_2 "
+                      style="display: inline-block; margin-left: 20%; font-size:38px; line-height:normal">
+                      <span style="letter-spacing:normal"><span style="font-size:38px;">Work Experience</span></span>
                     </h2>
                     <hr class="horizontal-line" onclick="">
                     <div class="timeline-container" onclick="">
-                    <div class="timeline" onclick="">
-                      <ul>
-                        <li>
-                          <div class="timeline-content" onclick="">
-                            <h3 class="date">Jan 2023 - Present</h3>
-                            <h1>Graduate Student Researcher | Cornell University</h1>
-                            <p>Serving as a developer for a Computer Vision project aimed at localized identification of emission sources for air quality management. Created pipeline for segmentation and tracking of vehicles by optimizing YOLO & SORT algorithms saving 6 min/detection. Currently optimizing the code to handle occlusion issues and calibrate emission levels thereby increasing accuracy by ~9%</p>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="timeline-content" >
-                            <h3 class="date">Sep 2020 - July 2022</h3>
-                            <h1>Associate Software Developer | Q2 Software, Inc.</h1>
-                            <p>Delivered high-quality solutions for over 7 full stack projects in collaboration with functional stakeholders aiding critical lending solutions to banks. Identified and resolved code performance issues by conducting in-depth reviews of configuration files, logs and SQL queries. Received “Prevailed Persistence Award” for outstanding contribution and consistently delivering high-quality Rest API’s,  bug-free code that met project timelines and exceeded customer expectations for Loan origination applications.</p>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="timeline-content" onclick="">
-                            <h3 class="date">Jan 2020 - Aug 2020</h3>
-                            <h1>Software Development Intern | Q2 Software, Inc.</h1>
-                            <p>Responsible for developing automated request and response mapping applications for third-party API integration of consumer and commercial finance platforms. Successfully reduced JSON mapping write time thereby improving operational efficiency by 200%, which potentially increased the productivity of developers in delivering integrations. Attained management recognition for delivering a turnkey solution for the efficient processing of consumer credit data.</p>
-                          </div>
-                        </li>
-                        
-                      </ul>
+                      <div class="timeline" onclick="">
+                        <ul>
+                          <li>
+                            <div class="timeline-content" onclick="">
+                              <h3 class="date">Jan 2023 - Present</h3>
+                              <h1>Graduate Student Researcher | Cornell University</h1>
+                              <p>Serving as a developer for a Computer Vision project aimed at localized identification
+                                of emission sources for air quality management. Created pipeline for segmentation and
+                                tracking of vehicles by optimizing YOLO & SORT algorithms saving 6 min/detection.
+                                Currently optimizing the code to handle occlusion issues and calibrate emission levels
+                                thereby increasing accuracy by ~9%</p>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="timeline-content">
+                              <h3 class="date">Sep 2020 - July 2022</h3>
+                              <h1>Associate Software Developer | Q2 Software, Inc.</h1>
+                              <p>Delivered high-quality solutions for over 7 full stack projects in collaboration with
+                                functional stakeholders aiding critical lending solutions to banks. Identified and
+                                resolved code performance issues by conducting in-depth reviews of configuration files,
+                                logs and SQL queries. Received “Prevailed Persistence Award” for outstanding
+                                contribution and consistently delivering high-quality Rest API’s, bug-free code that met
+                                project timelines and exceeded customer expectations for Loan origination applications.
+                              </p>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="timeline-content" onclick="">
+                              <h3 class="date">Jan 2020 - Aug 2020</h3>
+                              <h1>Software Development Intern | Q2 Software, Inc.</h1>
+                              <p>Responsible for developing automated request and response mapping applications for
+                                third-party API integration of consumer and commercial finance platforms. Successfully
+                                reduced JSON mapping write time thereby improving operational efficiency by 200%, which
+                                potentially increased the productivity of developers in delivering integrations.
+                                Attained management recognition for delivering a turnkey solution for the efficient
+                                processing of consumer credit data.</p>
+                            </div>
+                          </li>
+
+                        </ul>
+                      </div>
                     </div>
-                  </div>
                   </section>
 
                 </div>
@@ -4198,45 +4069,7 @@
 
                             </div>
                           </section>
-                          <section id="comp-lid9ywuh" tabindex="-1" class="Oqnisf comp-lid9ywuh wixui-section">
-                            <div id="bgLayers_comp-lid9ywuh" data-hook="bgLayers" class="MW5IWV">
-                              <div data-testid="colorUnderlay" class="LWbAav Kv1aVt"></div>
-                              <div id="bgMedia_comp-lid9ywuh" class="VgO9Yg"></div>
-                            </div>
-                            <div data-mesh-id="comp-lid9ywuhinlineContent" data-testid="inline-content" class="">
-                              <div data-mesh-id="comp-lid9ywuhinlineContent-gridContainer"
-                                data-testid="mesh-container-content">
-                                <div id="comp-lid9ywuj" class="KQmfd2" style="--height: 35px;">
-                                  <div id="text-content-comp-lid9ywuj"
-                                    class="KcpHeO tz5f0K comp-lid9ywuj wixui-rich-text" data-testid="richTextElement">
-                                    <h2 class="font_3 wixui-rich-text__text" style="font-size:30px; line-height:normal">
-                                      <span style="letter-spacing:normal" class="wixui-rich-text__text"><span
-                                          style="font-size:30px" class="wixui-rich-text__text">Section
-                                          Title</span></span>
-                                    </h2>
-                                  </div>
-                                </div>
-                                <div id="comp-lid9ywuk2" class="KQmfd2" style="--height: 230px;">
-                                  <div id="text-content-comp-lid9ywuk2"
-                                    class="KcpHeO tz5f0K comp-lid9ywuk2 wixui-rich-text" data-testid="richTextElement">
-                                    <p class="font_8 wixui-rich-text__text" style="font-size:16px; line-height:1.8em">
-                                      <span style="font-size:16px" class="wixui-rich-text__text">Every website has a
-                                        story, and your visitors want to hear yours. This space is a great opportunity
-                                        to give a full background on who you are, what your team does and what your site
-                                        has to offer. Double click on the text box to start editing your content and
-                                        make sure to add all the relevant details you want site visitors to know.<br
-                                          class="wixui-rich-text__text">
-                                        <br class="wixui-rich-text__text">
-                                        If you’re a business, talk about how you started and share your professional
-                                        journey. Explain your core values, your commitment to customers and how you
-                                        stand out from the crowd. Add a photo, gallery or video for even more
-                                        engagement.</span>
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </section>
+
                         </div>
                       </div>
                     </div>
@@ -5052,8 +4885,8 @@
                           data-testid="richTextElement">
                           <p class="font_10 wixui-rich-text__text"
                             style="text-align:center;line-height:1.79em;font-size:14px"><span
-                              class="color_15 wixui-rich-text__text">©2023 by Sandhya-Chinna-Pillai. 
-                              </span></p>
+                              class="color_15 wixui-rich-text__text">©2023 by Sandhya-Chinna-Pillai.
+                            </span></p>
                         </div>
                       </div>
                     </div>
