@@ -56,12 +56,12 @@
 .about-grid {
   margin-top: -250px;
   --num-cols: 2;
-  --row-height: 180px;
+  --row-height: 339px;
   box-sizing: border-box;
 	padding: var(--gap);
-  padding-left: 400px;
-  padding-right: 400px;
-
+  padding-left: 24%;
+  padding-right: 24%;
+  grid-auto-rows: var(--row-height);
 	display: grid;
 	grid-template-columns: repeat(var(--num-cols), 1fr);
 	gap:5px;
@@ -74,7 +74,7 @@
 
 .about-info{
   display: inline-block;
-  margin: 50px;
+  margin: 40px;
   --font-family: "Roboto", sans-serf;
 }
 .about-me{
