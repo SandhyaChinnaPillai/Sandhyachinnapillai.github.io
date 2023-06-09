@@ -2,17 +2,14 @@
 <html lang="en">
 
 <head>
+  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
   <meta charset="utf-8">
   <title></title>
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta http-equiv="Cache-Control" content="no-cache">
   <meta name="viewport"
     content="user-scalable=0, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
   <link rel="stylesheet" href="assets/css/styles.css" />
-
-  <script defer=""
-    src="https://static.parastorage.com/polyfill/v2/polyfill.min.js?features=es2015,es2016,es2017,fetch&amp;flags=gated&amp;unknown=polyfill&amp;rum=0"></script>
 
   <script type="text/javascript">
     function showContent(contentId) {
@@ -39,8 +36,6 @@
   </script>
   <link rel="stylesheet"
     href="https://static.parastorage.com/services/wix-thunderbolt-ds/dist/main-renderer-ds.59eb9703.min.css">
-  <script
-    src="https://static.parastorage.com/services/wix-thunderbolt-ds/dist/main-renderer-ds.31d6cfe0.bundle.min.js"></script>
   <link rel="stylesheet" type="text/css"
     href="https://static.parastorage.com/services/wix-thunderbolt-ds/dist/dynamic-imports.e7dc1fd8.chunk.min.css"
     crossorigin="anonymous">
@@ -48,17 +43,12 @@
     href="https://static.parastorage.com/services/editor-elements-library/dist/thunderboltPreview/rb_wixui.thunderboltPreview.40234cd5.min.css">
   <link rel="stylesheet" type="text/css"
     href="https://static.parastorage.com/services/editor-elements-design-systems/dist/thunderboltPreview/rb_dsgnsys.thunderboltPreview.7dc1d992.min.css">
-  <link rel="prefetch" href="https://static.parastorage.com/services/pro-gallery-tpa/1.221.0/editorScript.bundle.min.js"
-    id="prefetch-editor-5">
-  <link rel="prefetch" href="https://static.parastorage.com/services/portfolio-bob/1.692.0/editorScript.bundle.min.js"
-    id="prefetch-editor-8">
-  <link rel="prefetch" href="https://static.parastorage.com/services/wix-form-builder/1.5659.0/editor-app.bundle.min.js"
-    id="prefetch-editor-1729">
+  
 </head>
 
 <body class="">
 
-  <div id="SITE_CONTAINER">
+  <div id="SITE_CONTAINER" style="background-color: black;">
     <style data-comp-id="masterPage">
       #masterPage:not(.landingPage) #PAGES_CONTAINER {
         margin-top: 0px;
@@ -4737,74 +4727,7 @@
                                                                 style="display: none;">
                                                                 <link rel="stylesheet"
                                                                   id="layout-fixer-style-comp-lid9ppuv_r_comp-l45l1x5f_r_comp-l45kw2h61_r_comp-l61z6xb0">
-                                                                <script>try {
-                                                                    window.requestAnimationFrame(function () {
-
-                                                                      var ele = document.getElementById('pro-gallery-comp-lid9ppuv_r_comp-l45l1x5f_r_comp-l45kw2h61_r_comp-l61z6xb0');
-
-                                                                      var nativeComp = document.getElementById("comp-lid9ppuv_r_comp-l45l1x5f_r_comp-l45kw2h61_r_comp-l61z6xb0"), nativeRect = nativeComp.getBoundingClientRect();
-                                                                      var pgMeasures = { top: nativeRect.top, width: nativeRect.width, height: Number(getComputedStyle(nativeComp).getPropertyValue("height").replace("px", "")) };
-                                                                      var options = ((ele) => {
-                                                                        const mainFunc = (galleryEle) => {
-                                                                          const computedStyle = window.getComputedStyle(galleryEle);
-                                                                          const computedStyles = {};
-                                                                          // search css variables to query
-                                                                          const cssVariables = [];
-                                                                          const stylesheets = document.styleSheets;
-                                                                          for (let i = 0; i < stylesheets.length; i++) {
-                                                                            try {
-                                                                              const rules = stylesheets[i].rules || stylesheets[i].cssRules;
-                                                                              for (let j = 0; j < rules.length; j++) {
-                                                                                const rule = rules[j];
-                                                                                const style = rule.style;
-                                                                                if (style) {
-                                                                                  for (let k = 0; k < style.length; k++) {
-                                                                                    const prop = style[k];
-                                                                                    if (prop.startsWith('--')) {
-                                                                                      if (prop.includes('ProGallery-')) {
-                                                                                        cssVariables.push(prop);
-                                                                                      }
-                                                                                    }
-                                                                                  }
-                                                                                }
-                                                                              }
-                                                                            } catch (e) {
-                                                                            }
-                                                                          }
-                                                                          const cssVariablesMap = cssVariables.map((item) => {
-                                                                            return {
-                                                                              name: item,
-                                                                              value: computedStyle.getPropertyValue(item),
-                                                                            }
-                                                                          }).filter((item) => item.value);
-                                                                          // get computed styles
-                                                                          for (let i = 0; i < cssVariablesMap.length; i++) {
-                                                                            computedStyles[cssVariablesMap[i].name] = cssVariablesMap[i].value;
-                                                                          }
-                                                                          const options = Object.entries(computedStyles).reduce((res, [key, value]) => {
-                                                                            const keyNameStart = key.indexOf('ProGallery-') + 'ProGallery-'.length;
-                                                                            const keyName = key.substring(keyNameStart);
-                                                                            res[keyName] = JSON.parse(value);
-                                                                            return res;
-                                                                          }, {});
-                                                                          const optionsStr = Object.entries({ ...{ "controllers_layoutParams_structure_galleryRatio_method": "FIXED", "behaviourParams_gallery_blockContextMenu": true, "controllers_layoutParams_structure_galleryRatio_value": 1.7777777777777777, "layoutParams_structure_galleryLayout": 2, "layoutParams_structure_scrollDirection": "VERTICAL", "layoutParams_structure_layoutOrientation": "VERTICAL", "behaviourParams_gallery_layoutDirection": "LEFT_TO_RIGHT", "layoutParams_structure_itemSpacing": 40, "layoutParams_structure_numberOfGridRows": 1, "layoutParams_structure_numberOfColumns": 3, "layoutParams_groups_density": 0.8, "layoutParams_targetItemSize_value": 80, "layoutParams_crop_method": "FILL", "layoutParams_crop_ratios": [1], "layoutParams_structure_responsiveMode": "SET_ITEMS_PER_ROW", "layoutParams_thumbnails_alignment": "BOTTOM", "layoutParams_thumbnails_size": 120, "layoutParams_thumbnails_spacing": 4, "controllers_layoutParams_thumbnails_marginToGallery": 0, "behaviourParams_gallery_vertical_loadMore_enable": false, "behaviourParams_gallery_vertical_loadMore_text": "Load More", "behaviourParams_gallery_horizontal_navigationDuration": 800, "behaviourParams_gallery_horizontal_loop": false, "behaviourParams_gallery_horizontal_autoSlide_interval": 4, "behaviourParams_gallery_horizontal_autoSlide_speed": 50, "behaviourParams_gallery_horizontal_autoSlide_pauseOnHover": true, "layoutParams_navigationArrows_enable": true, "layoutParams_navigationArrows_size": 40, "layoutParams_navigationArrows_position": "ON_GALLERY", "layoutParams_navigationArrows_container_type": "NONE", "layoutParams_navigationArrows_mouseCursorContainerMaxWidth": "100%", "layoutParams_navigationArrows_verticalAlignment": "IMAGE_CENTER", "behaviourParams_item_content_hoverAnimation": "NO_EFFECT", "behaviourParams_item_content_loader": "MAIN_COLOR", "behaviourParams_item_content_placementAnimation": "NO_EFFECT", "behaviourParams_gallery_scrollAnimation": "FADE_IN", "behaviourParams_gallery_horizontal_slideAnimation": "SCROLL", "behaviourParams_item_video_enablePlayButton": false, "behaviourParams_item_video_playTrigger": "AUTO", "behaviourParams_item_video_speed": 1, "controllers_optionsMap_behaviourParams_item_video_volume": false, "behaviourParams_item_video_loop": true, "behaviourParams_item_clickAction": "ACTION", "behaviourParams_item_content_magnificationValue": 2, "layoutParams_navigationArrows_padding": 24, "behaviourParams_gallery_vertical_loadMore_amount": "ALL", "behaviourParams_gallery_horizontal_autoSlide_behaviour": "OFF", "behaviourParams_gallery_horizontal_slideTransition": "cubic-bezier(0.46,0.1,0.25,1)", "controllers_layoutParams_external_info_placement": "BELOW", "controllers_layoutParams_external_info_SocialButtonsHorizontalAlignment": "LEFT", "controllers_layoutParams_internal_info_SocialButtonsHorizontalAlignment": "LEFT", "layoutParams_info_placement": "OVERLAY", "controllers_layoutParams_info_allowTitle": true, "controllers_layoutParams_info_allowDescription": false, "controllers_layoutParams_info_allowTitleAndDescription": ",controllers_layoutParams_info_allowTitle", "controllers_layoutParams_info_verticalPadding": 0, "controllers_layoutParams_info_horizontalPadding": 0, "controllers_layoutParams_info_verticalAlignment": "START", "controllers_layoutParams_info_horizontalAlignment": "START", "layoutParams_info_sizeUnits": "PERCENT", "layoutParams_info_height": 100, "controllers_layoutParams_info_width__pixel": 200, "controllers_layoutParams_info_width_percent": 50, "behaviourParams_item_overlay_hoveringBehaviour": "APPEARS", "controllers_behaviourParams_item_overlay_overlayType": "FULL", "behaviourParams_item_overlay_sizeUnits": "PERCENT", "controllers_behaviourParams_item_overlay_enabled": true, "controllers_layoutParams_info_newInfo_external_enabled": false, "controllers_behaviourParams_item_overlay_size_percent": 100, "controllers_behaviourParams_item_overlay_size_pixel": 110, "behaviourParams_item_overlay_position": "BOTTOM", "behaviourParams_item_overlay_padding": 0, "behaviourParams_item_overlay_hoverAnimation": "FADE_IN", "behaviourParams_item_threeDimensionalScene_playTrigger": "AUTO", "controllers_experimental_useNewInfo": "false", "controllers_showManageMedia": false, "controllers_layoutParams_infoElementOptions_external_order": "top,middle,Title,Description,bottom", "controllers_layoutParams_infoElementOptions_internal_order": "top,middle,Title,Description,bottom", "controllers_layoutParams_infoElementOptions_external_enabled": ",,,,,,,", "controllers_layoutParams_infoElementOptions_internal_enabled": ",,Title,,", "controllers_fullscreen_allowTitleExpand": true, "controllers_fullscreen_allowDescriptionExpand": true, "controllers_fullscreen_allowLinkExpand": false, "controllers_fullscreen_whenToShowInfo": "ALWAYS", "controllers_fullscreen_expandInfoPosition": "SIDE", "controllers_fullscreen_showInfoExpandButton": false, "controllers_fullscreen_allowFullscreenExpand": true, "controllers_fullscreen_fullscreenLoop": false, "controllers_fullscreen_allowFullscreenMagnifyImage": false, "controllers_fullscreen_fullscreenMagnificationLevel": 2, "controllers_fullscreen_fullscreenMagnificationPercent": 200, "controllers_fullscreen_backgroundBlurFilter": 1, "controllers_fullscreen_backgroundGrayscaleFilter": false, "FULLSCREEN_PREVIEW": "", "FULLSCREEN_CTA": "", "behaviourParams_item_video_volume": 0, "controllers_layoutParams_info_width_pixel": 200, "behaviourParams_item_secondaryMedia_enableHoverTrigger": false, "responsive": true, "alwaysShowHover": false, "infoElementsOptions_external_enabled_Title": false, "infoElementsOptions_external_enabled_Description": false, "infoElementsOptions_external_enabled_CustomButton": false, "infoElementsOptions_external_enabled_Social": false, "infoElementsOptions_external_socialParams_options_loveButton": false, "infoElementsOptions_external_socialParams_options_allowSocial": false, "infoElementsOptions_external_socialParams_options_loveCounter": false, "infoElementsOptions_external_socialParams_options_allowDownload": true, "infoElementsOptions_external_order_top": "CustomButton", "infoElementsOptions_external_order_middle": "Title,Description", "infoElementsOptions_external_order_bottom": "Social", "infoElementsOptions_internal_enabled_Title": true, "infoElementsOptions_internal_enabled_Description": false, "infoElementsOptions_internal_enabled_CustomButton": false, "infoElementsOptions_internal_enabled_Social": false, "infoElementsOptions_internal_socialParams_options_loveButton": false, "infoElementsOptions_internal_socialParams_options_allowSocial": false, "infoElementsOptions_internal_socialParams_options_loveCounter": false, "infoElementsOptions_internal_socialParams_options_allowDownload": true, "infoElementsOptions_internal_order_top": "CustomButton", "infoElementsOptions_internal_order_middle": "Title,Description", "infoElementsOptions_internal_order_bottom": "Social", "layoutParams_info_width": 50, "galleryHorizontalAlign": "flex-start", "galleryTextAlign": "left", "infoElementsOptions_external_socialParams_horizontalAlignment": "left", "infoElementsOptions_internal_socialParams_horizontalAlignment": "left", "behaviourParams_item_overlay_size": 100, "layoutParams_structure_galleryRatio_value": 0.5625, "layoutParams_thumbnails_marginToGallery": 0, "defaultShowInfoExpand": true, "controllers_fullscreen_itemClick": "action", "layoutParams_crop_enable": false, "layoutParams_targetItemSize_unit": "SMART", "behaviourParams_item_secondaryMedia_trigger": "HOVER" }, ...options })
-                                                                            .map(([key, value]) => ([key, JSON.stringify(value)]))
-                                                                            .filter(([key, value]) => key.includes('layoutParams_'))
-                                                                            .map((keyval) => keyval.join(":")).join('|');
-                                                                          return optionsStr;
-                                                                        };
-                                                                        return mainFunc(ele);
-                                                                      })(ele);
-
-                                                                      var isVertical = options.includes('layoutParams_structure_scrollDirection:"VERTICAL"');
-                                                                      var layoutFixerUrl = '/_serverless/pro-gallery-native-layout-fixer/layoutCssNative?id=comp-lid9ppuv_r_comp-l45l1x5f_r_comp-l45kw2h61_r_comp-l61z6xb0&items=10029_1810_2552|9847_888_1194|10026_1200_600&container=' + pgMeasures.top + '_' + pgMeasures.width + '_' + pgMeasures.height + '_' + window.innerHeight + '&options=' + options;
-                                                                      document.getElementById('layout-fixer-style-comp-lid9ppuv_r_comp-l45l1x5f_r_comp-l45kw2h61_r_comp-l61z6xb0').setAttribute('href', encodeURI(layoutFixerUrl));
-                                                                    });
-
-
-                                                                  } catch (e) {
-                                                                    console.warn('Cannot set layoutFixer css', e);
-                                                                  }</script>
+                                 
                                                               </div>
                                                             </div>
                                                           </div>
