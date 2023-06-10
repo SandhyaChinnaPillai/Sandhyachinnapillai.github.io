@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
 
 .SITE_HEADER_WRAPPER{
-  margin-top: -50px !important;
+  margin-top: -37px !important;
 }
 .dBAkHi {
   display: none;
@@ -12,13 +12,13 @@
 }
 /*Image grid */
 .image-grid{
-  --gap: 16px;
+  --gap: 7px;
   --num-cols: 6;
   --row-height: 110px;
   box-sizing: border-box;
 	padding: var(--gap);
-  padding-left: 300px;
-  padding-right: 300px;
+  padding-left: 15%;
+  padding-right: 15%;
 
 	display: grid;
 	grid-template-columns: repeat(var(--num-cols), 1fr);
@@ -52,6 +52,48 @@
     padding-left:0 !important;
     padding-right:0 !important;
 	}
+}
+
+/*travel photo grid*/
+
+.travel-grid{
+  --gap: 7px;
+  --num-cols: 9;
+  --row-height: 55px;
+  box-sizing: border-box;
+	padding: var(--gap);
+  padding-left: 10%;
+  padding-right: 10%;
+
+	display: grid;
+	grid-template-columns: repeat(var(--num-cols), 1fr);
+	grid-auto-rows: var(--row-height);
+	gap: var(--gap);
+}
+.travel-grid>img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+/* image spans 2 columns */
+.travel-grid-col-2 {
+	grid-column: span 2;
+}
+.travel-grid-row-7{
+  grid-row: span 7;
+}
+.travel-grid-col-3 {
+	grid-column: span 3;
+}
+/* image spans 2 rows */
+.travel-grid-row-2 {
+	grid-row: span 4;
+}
+.travel-grid-row {
+	grid-row: span 2;
+}
+.travel-grid-row-3 {
+	grid-row: span 6;
 }
 .section-about{
   margin-top: 200px;
