@@ -10,6 +10,20 @@
 .dBAkHi.active {
   display: block;
 }
+/*home page styling*/
+.half-half-grid{
+  --num-cols: 2;
+  box-sizing: border-box;
+	
+	display: grid;
+	grid-template-columns: repeat(var(--num-cols), 1fr);
+	position: absolute;
+  top: 0;
+  left: 0;
+  
+  height: 100%;
+  background: url(assets/images/Laptop.jpeg);
+}
 /*Image grid */
 .image-grid{
   --gap: 7px;
