@@ -3,11 +3,11 @@
 .SITE_HEADER_WRAPPER{
   margin-top: -37px !important;
 }
-.dBAkHi {
+.Section {
   display: none;
 }
 
-.dBAkHi.active {
+.Section.active {
   display: block;
 }
 
