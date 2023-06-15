@@ -4,6 +4,8 @@
 <head>
   <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <meta charset="utf-8">
   <title></title>
   <meta http-equiv="Cache-Control" content="no-cache">
@@ -26,7 +28,9 @@
         selectedContent.classList.add('active');
       }
     }
+
   </script>
+
 
 
 
@@ -37,7 +41,7 @@
   </script>
 
 
-  
+
 </head>
 
 <body class="">
@@ -738,6 +742,8 @@
 
       <div id="site-root" class="site-root">
         <div id="masterPage" data-view-mode="preview" class="mesh-layout masterPage">
+          <!-- popups for project details -->
+
           <header class="SITE_HEADER_WRAPPER" tabindex="-1" id="SITE_HEADER_WRAPPER">
             <div id="SITE_HEADER" tabindex="-1">
 
@@ -827,6 +833,7 @@
           </header>
           <main id="PAGES_CONTAINER" class="PAGES_CONTAINER" tabindex="-1" data-main-content="true">
             <div id="SITE_PAGES" data-page-transition="OutIn" class="JshATs SITE_PAGES">
+
               <div id="SITE_PAGES_TRANSITION_GROUP" class="fcNEqv">
                 <!--Home-->
                 <div id="Home" class="Section Home active">
@@ -1189,33 +1196,80 @@
                 <div id="Projects" class="Section Projects">
                   <div class="PFkO7r" data-testid="page-bg"></div>
                   <div class="HT5ybB">
+                    <div id="modal-wrap" class="modal-wrap flex " style="display: none;">
+                      <div class="modal" id="modal" style="max-width: 1000px;">
+                        <div class="carousel-wrap" style="width:100%">
+                          <div class="window">
+                            <div id="carousel" style="left: -700px;transform: translateX(0px);">
+                              <div class="slide"
+                                style="width: 100%; height: -webkit-fill-available; background: url('assets/images/MOT.png') center center / cover; object-fit: cover;">
+                              </div>
+                              <div class="slide"
+                                style="width: 100%; height: -webkit-fill-available; background: url('assets/images/dump_Truck.png') center center / cover; object-fit: cover;">
+                              </div>
+                              <div class="slide"
+                                style="width: 100%; height: -webkit-fill-available; background: url('assets/images/MOT_results.jpg') center center / cover; object-fit: cover;">
+                              </div>
+                              <a class="prev" onclick="plusSlides(-1)" style="left:0;">&#10094;</a>
+                              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="info-box"
+                          style="font: normal normal normal 16px/1.41em raleway, sans-serif; background-color: black; color: #fff;">
+                          <div class="title">
+                            Computer Vision to Identify emission sources
+                          </div>
+
+                          <div class="detail">We've harnessed computer vision technology to analyze traffic data and
+                            address the significant issue of urban air pollution caused by traffic emissions. Our
+                            innovative approach utilizes algorithms like YOLO and SORT to detect, track, and categorize
+                            vehicles from surveillance footage. By correlating specific traffic characteristics with
+                            pollution levels, we aim to enhance land regression models for predicting future pollution.
+                            This application of computer vision represents a significant stride in understanding and
+                            managing urban air pollution.</div>
+                          <a href="#" target="_blank">
+                            <div class="button">
+                              <i class="mdi mdi-open-in-new"></i>VIEW SITE
+                            </div>
+                          </a>
+                        </div>
+                        <i class="close mdi mdi-close"></i>
+                      </div>
+                    </div>
                     <div id="ContainerProjects" style="background-color: black; height: 100%;">
-                      <h2>My Work</h2>
+                      <div id="comp-projectHeading0" style="margin-left: 20%; margin-top: 55px; margin-bottom: 20px;">
+                        <h1 class="font_0" style="font-size:56px;line-height:normal">
+                          <span style="font-size:45px; --font-family: Roboto, sans-serf;">My Projects</span>
+                        </h1>
+                      </div>
                       <div class="project-list">
                         <div class="work" onclick="">
                           <img src="assets/images/MOT.png">
                           <div class="project-layer">
                             <h3>Computer vision to identify emission sources</h3>
-                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            <a id="projectMoreButton" class="button" style="cursor: pointer;">Learn More</a>
                           </div>
                         </div>
                         <div class="work" onclick="">
                           <img src="assets/images/GraphNetwork.jpg">
                           <div class="project-layer">
                             <h3>Sentiment Analysis using Neo4J</h3>
-                            <a href="#"></a>
+                            <a id="projectMoreButton" class="button" style="cursor: pointer;">Learn More</a>
                           </div>
                         </div>
                         <div class="work" onclick="">
                           <img src="assets/images/ISL.jpg">
                           <div class="project-layer">
                             <h3>Bi-Directional Augmentative Communication</h3>
-                            <a href="#"></a>
+                            <a id="projectMoreButton" class="button" style="cursor: pointer;">Learn More</a>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
@@ -1270,7 +1324,47 @@
   </div>
   </div>
 
+  <script>
+    var popupButton = document.getElementById('projectMoreButton');
+    var closeButton = document.getElementById('closeButton');
+    var popup = document.getElementById('modal-wrap');
 
+    popupButton.addEventListener('click', function () {
+      popup.style.display = "flex";
+
+    });
+
+    closeButton.addEventListener('click', function () {
+      popup.classList.remove("visible");
+    });
+
+  </script>
+
+  <!-- Project gralley slideshow-->
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+
+    }
+  </script>
 </body>
 
 </html>
