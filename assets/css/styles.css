@@ -594,7 +594,7 @@ circle p {
   height: 100%;
 }
 
-.Projects .button {
+.project-list .button {
   left: 0;
   position: absolute;
   right: 0;
@@ -608,13 +608,13 @@ circle p {
   font: normal normal normal 16px/1.41em raleway, sans-serif;
 }
 
-.button:hover {
+.project-list .button:hover {
   background: #DE350B;
   color: white;
 }
-
+/*
 .modal-wrap {
-  pointer-events: none;
+  pointer-events: auto;
   position: fixed;
   width: 100vw;
   z-index: 100;
@@ -629,8 +629,8 @@ circle p {
 .modal-wrap .detail {
   font-size: 18px;
   line-height: 18pt;
-  /* margin-top: 15px; */
-  margin: 20px;
+  
+  margin: 20px 50px;
   text-align: justify;
   }
   
@@ -648,6 +648,28 @@ circle p {
   flex-direction: column;
   justify-content: center;
 }
+.modal-wrap .close {
+  padding: 20px;
+  color: #bbb;
+  cursor: pointer;
+  font-size: 25pt;
+  font-weight: 800;
+  position: absolute;
+  right: 0px;
+  }
+  .modal-wrap .close:hover
+  {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .mdi {
+    display: inline-block;
+    font: normal normal normal 24px/1 "Material Design Icons";
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    }
 
 .modal {
   align-items: flex-start;
@@ -716,7 +738,167 @@ circle p {
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+*/
+.carousel-wrap {
+  height: 350px;
+  margin: 0 auto;
+  position: relative;
+}
 
+.window {
+  height: 100%;
+  background: #222;
+  overflow: hidden;
+  position: relative;
+}
+
+#carousel {
+  position: relative;
+  top: 0;
+  width: 10000px;
+}
+
+.slide {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  height: 350px;
+  justify-content: center;
+}
+
+.mdi-chevron-left,
+.mdi-chevron-right {
+  background: rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  color: #fff;
+  cursor: pointer;
+  cursor: pointer;
+  font-size: 14pt !important;
+  font-weight: bold;
+  padding: 10px 15px;
+  position: absolute;
+}
+
+.mdi-chevron-left {
+  left: 0;
+}
+
+.mdi-chevron-right {
+  right: 0;
+}
+
+.transition {
+  transition: 0.7s;
+}
+
+.modal-wrap {
+  height: 77vh;
+  pointer-events: none;
+  position: fixed;
+  width: 100vw;
+  z-index: 100;
+  margin-left:25%;
+}
+.modal-wrap .mask {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.3s;
+  width: 100%;
+}
+.modal-wrap .modal {
+  align-items: flex-start;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  color: #333;
+  height: 100vh;
+  opacity: 0;
+  position: relative;
+  text-align: left;
+  transform: scale(0.8);
+  transition: all 0.3s;
+}
+.modal-wrap .close {
+  bottom: 25px;
+  color: #bbb;
+  cursor: pointer;
+  font-size: 20pt;
+  font-weight: 800;
+  position: absolute;
+  right: 10px;
+}
+.modal-wrap .info-box {
+  border-top: 3px solid #1b242f;
+  box-sizing: border-box;
+  color: white;
+  padding: 15px 10px 85px 10px;
+  background-color: #000;
+}
+.modal-wrap .title {
+  font: normal normal normal 22px/1.41em raleway, sans-serif;
+  line-height: 20pt;
+}
+.modal-wrap .tag {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #c0c0c0;
+  display: block;
+  font-family: "Raleway-bold";
+  font-size: 8pt;
+  font-weight: 300;
+  padding-bottom: 15px;
+}
+.modal-wrap .detail {
+  font: normal normal normal 16px/1.41em raleway, sans-serif;
+  line-height: 17pt;
+  margin-top: 13px;
+  text-align: justify;
+}
+.modal-wrap .mdi-open-in-new {
+  font-size: 11pt;
+  left: -10px;
+  position: relative;
+}
+.modal-wrap .button {
+  background: #e31b6d;
+  border: 0;
+  bottom: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 10pt;
+  font-weight: 600;
+  left: 10px;
+  padding: 11px 30px;
+  pointer-events: none;
+  position: absolute;
+  transition: all 0.5s;
+  visibility: hidden;
+}
+.modal-wrap .button.visible {
+  pointer-events: initial;
+  visibility: visible;
+}
+.modal-wrap .button:hover {
+  background: #fff;
+  color: #e31b6d;
+}
+.modal-wrap .carousel {
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+}
+.modal-wrap.visible {
+  pointer-events: initial;
+}
+.modal-wrap.visible .modal {
+  opacity: 1;
+  transform: scale(1);
+}
+.modal-wrap.visible .mask {
+  opacity: 1;
+}
 /* Variables */
 :root {
   --font-family: "Roboto", sans-serf;

@@ -4,7 +4,11 @@
 <head>
   <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
+  <link
+      href="fonts/mdi/css/materialdesignicons.min.css"
+      media="all"
+      rel="stylesheet"
+    />
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <meta charset="utf-8">
   <title></title>
@@ -13,7 +17,10 @@
     content="user-scalable=0, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
   <link rel="stylesheet" href="assets/css/styles.css" />
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+  <script src="assets/js/modal.js"></script>
   <script type="text/javascript">
     function showContent(contentId) {
       // Hide all content divs
@@ -1196,22 +1203,51 @@
                 <div id="Projects" class="Section Projects">
                   <div class="PFkO7r" data-testid="page-bg"></div>
                   <div class="HT5ybB">
-                    <div id="modal-wrap" class="modal-wrap flex " style="display: none;">
+                    
+                      <div class="modal-wrap flex">
+        <div class="modal" id="modal" style="height: 100%;">
+          <div class="carousel-wrap" style="width:100%">
+            <div class="window">
+              <div id="carousel">
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+              </div>
+              <i class="mdi mdi-chevron-left" style="left:0;" id="prev">&#10094;</i>
+              <i class="mdi mdi-chevron-right" id="next">&#10095;</i>
+            </div>
+          </div>
+          <div class="info-box">
+            <div class="title"></div>
+            <div class="tag"></div>
+            <div class="detail"></div>
+            <a href="#" target="_blank"
+              ><div class="button">
+                <i class="mdi mdi-open-in-new"></i>VIEW SITE
+              </div></a
+            >
+          </div>
+          <i class="close mdi mdi-close"></i>
+        </div>
+      </div>
+                    <!--
+                    <div id="modal-wrap1" class="modal-wrap flex " style="display: none;">
                       <div class="modal" id="modal" style="max-width: 1000px;">
                         <div class="carousel-wrap" style="width:100%">
                           <div class="window">
                             <div id="carousel" style="left: -700px;transform: translateX(0px);">
-                              <div class="slide"
+                              <a class ="close mdi" id="closeButton" onclick="closeModal('modal-wrap1')">&#10006;</a>
+                              <div class="slide1"
                                 style="width: 100%; height: -webkit-fill-available; background: url('assets/images/MOT.png') center center / cover; object-fit: cover;">
                               </div>
-                              <div class="slide"
+                              <div class="slide1"
                                 style="width: 100%; height: -webkit-fill-available; background: url('assets/images/dump_Truck.png') center center / cover; object-fit: cover;">
                               </div>
-                              <div class="slide"
+                              <div class="slide1"
                                 style="width: 100%; height: -webkit-fill-available; background: url('assets/images/MOT_results.jpg') center center / cover; object-fit: cover;">
                               </div>
-                              <a class="prev" onclick="plusSlides(-1)" style="left:0;">&#10094;</a>
-                              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                              <a class="prev" onclick="plusSlides1(-1)" style="left:0;">&#10094;</a>
+                              <a class="next" onclick="plusSlides1(1)">&#10095;</a>
                             </div>
 
                           </div>
@@ -1235,28 +1271,75 @@
                             </div>
                           </a>
                         </div>
-                        <i class="close mdi mdi-close"></i>
+                        
                       </div>
                     </div>
+                    <div id="modal-wrap2" class="modal-wrap flex " style="display: none;">
+                      <div class="modal" id="modal" style="max-width: 1000px;">
+                        <div class="carousel-wrap" style="width:100%">
+                          <div class="window">
+                            <div id="carousel" style="left: -700px;transform: translateX(0px);">
+                              <a class ="close mdi" id="closeButton" onclick="closeModal('modal-wrap2')">&#10006;</a>
+                              <div class="slide2"
+                                style="width: 100%; height: -webkit-fill-available; background: url('assets/images/WhyNeo4J.png') center center / cover; object-fit: cover;">
+                              </div>
+                              <div class="slide2"
+                                style="width: 100%; height: -webkit-fill-available; background: url('assets/images/SentimentConfidence.png') center center / cover; object-fit: cover;">
+                              </div>
+                              <div class="slide2"
+                                style="width: 100%; height: -webkit-fill-available; background: url('assets/images/SentimentChangeSlide.png') center center / cover; object-fit: cover;">
+                              </div>
+                              <div class="slide2"
+                                style="width: 100%; height: -webkit-fill-available; background: url('assets/images/SentimentChangeGrapgh.png') center center / cover; object-fit: cover;">
+                              </div>
+                              <a class="prev" onclick="plusSlides2(-1,)" style="left:0;">&#10094;</a>
+                              <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="info-box"
+                          style="font: normal normal normal 16px/1.41em raleway, sans-serif; background-color: black; color: #fff;">
+                          <div class="title">
+                            Sentiment Analysis using Neo4J
+                          </div>
+
+                          <div class="detail">We've harnessed computer vision technology to analyze traffic data and
+                            address the significant issue of urban air pollution caused by traffic emissions. Our
+                            innovative approach utilizes algorithms like YOLO and SORT to detect, track, and categorize
+                            vehicles from surveillance footage. By correlating specific traffic characteristics with
+                            pollution levels, we aim to enhance land regression models for predicting future pollution.
+                            This application of computer vision represents a significant stride in understanding and
+                            managing urban air pollution.</div>
+                          <a href="#" target="_blank">
+                            <div class="button">
+                              <i class="mdi mdi-open-in-new"></i>VIEW SITE
+                            </div>
+                          </a>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  -->
                     <div id="ContainerProjects" style="background-color: black; height: 100%;">
                       <div id="comp-projectHeading0" style="margin-left: 20%; margin-top: 55px; margin-bottom: 20px;">
                         <h1 class="font_0" style="font-size:56px;line-height:normal">
                           <span style="font-size:45px; --font-family: Roboto, sans-serf;">My Projects</span>
                         </h1>
                       </div>
-                      <div class="project-list">
+                      <div id="project-list" class="project-list">
                         <div class="work" onclick="">
-                          <img src="assets/images/MOT.png">
+                          <img src="assets/images/cv-0.png">
                           <div class="project-layer">
                             <h3>Computer vision to identify emission sources</h3>
-                            <a id="projectMoreButton" class="button" style="cursor: pointer;">Learn More</a>
+                            <div id="cv" class="button" style="cursor: pointer;">Learn More</div>
                           </div>
                         </div>
                         <div class="work" onclick="">
                           <img src="assets/images/GraphNetwork.jpg">
                           <div class="project-layer">
                             <h3>Sentiment Analysis using Neo4J</h3>
-                            <a id="projectMoreButton" class="button" style="cursor: pointer;">Learn More</a>
+                            <div id="sentimentAnalysis" class="button" style="cursor: pointer;">Learn More</div>
                           </div>
                         </div>
                         <div class="work" onclick="">
@@ -1323,24 +1406,21 @@
 
   </div>
   </div>
-
+  
+<!--
   <script>
-    var popupButton = document.getElementById('projectMoreButton');
-    var closeButton = document.getElementById('closeButton');
-    var popup = document.getElementById('modal-wrap');
-
-    popupButton.addEventListener('click', function () {
+    function showModal(contentId) {
+      var popup = document.getElementById(contentId);
       popup.style.display = "flex";
-
-    });
-
-    closeButton.addEventListener('click', function () {
-      popup.classList.remove("visible");
-    });
+    }
+    function closeModal(contentId) {
+      var popup = document.getElementById(contentId);
+      popup.style.display = "none";
+    }
 
   </script>
 
-  <!-- Project gralley slideshow-->
+Project gralley slideshow
   <script>
     let slideIndex = 1;
     showSlides(slideIndex);
@@ -1365,6 +1445,7 @@
 
     }
   </script>
+  -->
 </body>
 
 </html>
