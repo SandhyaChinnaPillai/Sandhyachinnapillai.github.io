@@ -14,6 +14,12 @@ $(document).ready(function() {
         detail:
           'The purpose of this project was to understand the sentiments of travelers on airlines in the United States using sentiment analysis techniques. We extracted sentiment information from Twitter posts during the month of February 2015 and analyzed the data to gain insights into the overall emotional tone of the public towards the airline industry. Furthermore, we compared the performance of a graphical database system, specifically Neo4j, with that of a traditional relational database management system (RDBMS), such as MySQL.',
         link: ''
+      },
+      ISL:{
+        title: 'Bi-Directional Communication System for the Speech & Hearing Impaired',
+        tag: 'App to communicate with speech and hearing impaired',
+        detail: 'This project aims to bridge the communication gap between speech-impaired and abled individuals by providing a bi-directional communication system that supports both gesture translation and speech translation modes. The system uses computer vision and machine learning techniques to recognize Indian Sign Language (ISL) gestures captured by a camera and translate them into text, which is then output as speech for abled individuals. In the speech translation mode, the system converts spoken language into text for speech-impaired individuals to view.',
+        link:''
       }
     };
   

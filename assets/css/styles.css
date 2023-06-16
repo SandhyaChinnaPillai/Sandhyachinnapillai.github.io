@@ -656,6 +656,7 @@ circle p {
   font-weight: 800;
   position: absolute;
   right: 0px;
+  z-index: 999;padding: 10px;
   }
   .modal-wrap .close:hover
   {
@@ -824,13 +825,14 @@ circle p {
   transition: all 0.3s;
 }
 .modal-wrap .close {
-  bottom: 25px;
+  top: 0px;
   color: #bbb;
   cursor: pointer;
   font-size: 20pt;
   font-weight: 800;
   position: absolute;
   right: 10px;
+  z-index: 999;padding: 10px;
 }
 .modal-wrap .info-box {
   border-top: 3px solid #1b242f;
