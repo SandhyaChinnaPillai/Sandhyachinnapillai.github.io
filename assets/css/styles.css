@@ -831,8 +831,9 @@ circle p {
   font-size: 20pt;
   font-weight: 800;
   position: absolute;
-  right: 10px;
+  right: 0px;
   z-index: 999;padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .modal-wrap .info-box {
   border-top: 3px solid #1b242f;
