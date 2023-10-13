@@ -33,9 +33,7 @@ $(document).ready(function() {
       $('.modal-wrap, #modal .button').removeClass('visible');
     });
   
-    $('.mask').on('click', function() {
-      $('.modal-wrap, #modal .button').removeClass('visible');
-    });
+    
   
     var carousel = $('#carousel'),
       slideWidth = 700,
