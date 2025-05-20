@@ -1,58 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link
-      href="fonts/mdi/css/materialdesignicons.min.css"
-      media="all"
-      rel="stylesheet"
-      />
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <meta charset="utf-8">
-    <title></title>
-    <meta http-equiv="Cache-Control" content="no-cache">
-    <meta name="viewport"
-      content="user-scalable=0, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
-    <script src="assets/js/modal.js"></script>
-    <script type="text/javascript">
-      function showContent(contentId) {
-        // Hide all content divs
-        var contentDivs = document.getElementsByClassName('Section');
-        for (var i = 0; i < contentDivs.length; i++) {
-          contentDivs[i].classList.remove('active');
-        }
-      
-        // Show the selected content div
-        var selectedContent = document.getElementById(contentId);
-        if (selectedContent) {
-          selectedContent.classList.add('active');
-        }
+
+<head>
+  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="fonts/mdi/css/materialdesignicons.min.css" media="all" rel="stylesheet" />
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <meta charset="utf-8">
+  <title></title>
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta name="viewport"
+    content="user-scalable=0, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script type="text/javascript">
+    function showContent(contentId) {
+      // Hide all content divs
+      var contentDivs = document.getElementsByClassName('Section');
+      for (var i = 0; i < contentDivs.length; i++) {
+        contentDivs[i].classList.remove('active');
       }
-      
-    </script>
-    <!-- DATA -->
-    <script type="text/javascript">
-      var siteAsJson = {};
-      var renderingMode = "PREVIEW";
-    </script>
-  </head>
-  <body class="">
-    <div id="SITE_CONTAINER" style="background-color: black;">
-      <style id="STYLE_OVERRIDES_ID">
-        #EXTRA_SITE_HEIGHT {
+
+      // Show the selected content div
+      var selectedContent = document.getElementById(contentId);
+      if (selectedContent) {
+        selectedContent.classList.add('active');
+      }
+    }
+
+  </script>
+  <!-- DATA -->
+  <script type="text/javascript">
+    var siteAsJson = {};
+    var renderingMode = "PREVIEW";
+  </script>
+</head>
+
+<body class="">
+  <div id="SITE_CONTAINER" style="background-color: black;">
+    <style id="STYLE_OVERRIDES_ID">
+      #EXTRA_SITE_HEIGHT {
         position: relative;
         height: 40px;
-        }
-      </style>
-      <div id="main_MF">
-        <style id="SITE_STYLES">
-          :root,
-          :host {
+      }
+    </style>
+    <div id="main_MF">
+      <style id="SITE_STYLES">
+        :root,
+        :host {
           --site-width: 980px;
           --above-all-z-index: 100000;
           --portals-z-index: 100001;
@@ -70,64 +68,77 @@
           --font_8: normal normal normal 18px/1.75em avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light, sans-serif;
           --font_9: normal normal normal 15px/1.875em avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light, sans-serif;
           --font_10: normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light, sans-serif
-          }
-          #masterPage {
+        }
+
+        #masterPage {
           left: 0;
           margin-left: 0;
           width: 100%;
           min-width: 980px
-          }
-          .font_0 {
+        }
+
+        .font_0 {
           font: var(--font_0);
           color: rgb(var(--color_white));
           letter-spacing: 0em
-          }
-          .font_2 {
+        }
+
+        .font_2 {
           font: var(--font_2);
           color: rgb(var(--color_white));
           letter-spacing: 0em
-          }
-          .font_4 {
+        }
+
+        .font_4 {
           font: var(--font_4);
           color: rgb(var(--color_white));
           letter-spacing: 0em
-          }
-          .font_6 {
+        }
+
+        .font_6 {
           font: var(--font_6);
           color: rgb(var(--color_white));
           letter-spacing: 0em
-          }
-          .font_7 {
+        }
+
+        .font_7 {
           font: var(--font_7);
           color: rgb(var(--color_white));
           letter-spacing: 0em
-          }
-          .font_8 {
+        }
+
+        .font_8 {
           font: var(--font_8);
           color: rgb(var(--color_white));
           letter-spacing: 0em
-          }
-          .font_9 {
+        }
+
+        .font_9 {
           font: var(--font_9);
           color: rgb(var(--color_white));
           letter-spacing: 0em
-          }
-          .font_10 {
+        }
+
+        .font_10 {
           font: var(--font_10);
           color: rgb(var(--color_white));
           letter-spacing: 0em
-          }
-          .color_white {
+        }
+
+        .color_white {
           color: rgb(var(--color_white))
-          }
-          .color_45 {
+        }
+
+        .color_45 {
           color: rgb(var(--color_white))
-          }
-          [data-mesh-id=SITE_FOOTERinlineContent] {
+        }
+
+        [data-mesh-id=SITE_FOOTERinlineContent] {
           height: auto;
           width: 100%
-          }
-          [data-mesh-id=SITE_FOOTERinlineContent-gridContainer] {
+        }
+
+        [data-mesh-id=SITE_FOOTERinlineContent-gridContainer] {
           position: static;
           display: grid;
           height: auto;
@@ -135,135 +146,160 @@
           min-height: auto;
           grid-template-rows: repeat(3, min-content) 1fr;
           grid-template-columns: 100%
-          }
-          [data-mesh-id=SITE_FOOTERinlineContent-gridContainer]>[id="comp-lid9pzu1"] {
+        }
+
+        [data-mesh-id=SITE_FOOTERinlineContent-gridContainer]>[id="comp-lid9pzu1"] {
           position: relative;
           margin: 37px 0px 23px calc((100% - 980px) * 0.5);
           left: 378px;
           grid-area: 1 / 1 / 2 / 2;
           justify-self: start;
           align-self: start
-          }
-          [data-mesh-id=SITE_FOOTERinlineContent-gridContainer]>[id="comp-lid9pzu11"] {
+        }
+
+        [data-mesh-id=SITE_FOOTERinlineContent-gridContainer]>[id="comp-lid9pzu11"] {
           position: relative;
           margin: 0px 0px 21px calc((100% - 980px) * 0.5);
           left: 396px;
           grid-area: 2 / 1 / 3 / 2;
           justify-self: start;
           align-self: start
-          }
-          [data-mesh-id=SITE_FOOTERinlineContent-gridContainer]>[id="comp-lid9pzu12"] {
+        }
+
+        [data-mesh-id=SITE_FOOTERinlineContent-gridContainer]>[id="comp-lid9pzu12"] {
           position: relative;
           margin: 0px 0px 43px calc((100% - 980px) * 0.5);
           left: 465px;
           grid-area: 3 / 1 / 4 / 2;
           justify-self: start;
           align-self: start
-          }
-          [data-mesh-id=SITE_FOOTERinlineContent-gridContainer]>[id="comp-lid9pzu2"] {
+        }
+
+        [data-mesh-id=SITE_FOOTERinlineContent-gridContainer]>[id="comp-lid9pzu2"] {
           position: relative;
           margin: 0px 0px 32px calc((100% - 980px) * 0.5);
           left: 295px;
           grid-area: 4 / 1 / 5 / 2;
           justify-self: start;
           align-self: start
-          }
-          #comp-lid9pzu1 {
+        }
+
+        #comp-lid9pzu1 {
           width: 230px;
           height: 31px
-          }
-          #comp-lid9pzu11 {
+        }
+
+        #comp-lid9pzu11 {
           width: 192px;
           height: 28px
-          }
-          #comp-lid9pzu12 {
+        }
+
+        #comp-lid9pzu12 {
           width: 50px;
           height: 20px
-          }
-          #comp-lid9pzu2 {
+        }
+
+        #comp-lid9pzu2 {
           width: 398px;
           height: 42px
-          }
-          #PAGES_CONTAINER {
+        }
+
+        #PAGES_CONTAINER {
           left: 0;
           margin-left: 0;
           width: 100%;
           min-width: 980px
-          }
-          #SITE_PAGES {
+        }
+
+        #SITE_PAGES {
           left: 0;
           margin-left: 0;
           width: 100%;
           min-width: 980px
-          }
-          #SITE_HEADER {
+        }
+
+        #SITE_HEADER {
           left: 0;
           margin-left: 0;
           width: 100%;
           min-width: 980px
-          }
-          #SITE_FOOTER {
+        }
+
+        #SITE_FOOTER {
           left: 0;
           margin-left: 0;
           width: 100%;
           min-width: 980px
-          }
-          #Home {
+        }
+
+        #Home {
           left: 0;
           margin-left: 0;
           width: 100%;
           min-width: 980px
-          }
-          #About {
+        }
+
+        #About {
           left: 0;
           margin-left: 0;
           width: 100%;
           min-width: 980px
-          }
-          #comp-artParah {
+        }
+
+        #comp-artParah {
           width: 800px;
-          }
-          #Art {
+        }
+
+        #Art {
           left: 0;
           margin-left: 0;
           width: 100%;
           min-width: 980px
-          }
-          #comp-lid9pzu1 {
+        }
+
+        #comp-lid9pzu1 {
           --min-height: 28px;
           height: var(--height);
           --height: 31px
-          }
-          #comp-lid9pzu1 * {
+        }
+
+        #comp-lid9pzu1 * {
           text-align: center !important
-          }
-          #comp-lid9pzu11 {
+        }
+
+        #comp-lid9pzu11 {
           --min-height: 26px;
           height: var(--height);
           --height: 28px
-          }
-          #comp-lid9pzu11 * {
+        }
+
+        #comp-lid9pzu11 * {
           text-align: center !important
-          }
-          #comp-lid9pzu12 {
+        }
+
+        #comp-lid9pzu12 {
           --item-size: 20px;
           --item-margin: 0 10px 0 0;
           --item-display: inline-block;
           width: 50px;
           height: 20px
-          }
-          #comp-lid9pzu2 {
+        }
+
+        #comp-lid9pzu2 {
           --min-height: 42px;
           height: var(--height);
           --height: 42px
-          }
-          #comp-lid9pzu2 * {
+        }
+
+        #comp-lid9pzu2 * {
           text-align: center !important
-          }
-          #SITE_PAGES {
+        }
+
+        #SITE_PAGES {
           --transition-duration: 700ms
-          }
-          #SITE_HEADER {
+        }
+
+        #SITE_HEADER {
           --bg: var(--color_11);
           --shd: none;
           --brwt: 0px;
@@ -276,8 +312,9 @@
           --alpha-brd: 0;
           --boxShadowToggleOn-shd: none;
           --shc-mutated-brightness: 0, 0, 0
-          }
-          #SITE_FOOTER {
+        }
+
+        #SITE_FOOTER {
           --bg: var(--color_11);
           --shd: none;
           --brwt: 0px;
@@ -290,777 +327,825 @@
           --alpha-brd: 0;
           --boxShadowToggleOn-shd: none;
           --shc-mutated-brightness: 0, 0, 0
-          }
-          #Home {
+        }
+
+        #Home {
           --param_boolean_previewHover: false;
           width: auto;
           min-height: 40px
-          }
-          #About {
+        }
+
+        #About {
           width: auto;
           min-height: 40px
-          }
-          #Art {
+        }
+
+        #Art {
           --param_boolean_previewHover: false;
           width: auto;
           min-height: 40px
-          }
-        </style>
-        <style id="SITE_FONTS">
-          @font-face {
+        }
+      </style>
+      <style id="SITE_FONTS">
+        @font-face {
           font-family: 'Raleway';
           font-style: italic;
           font-weight: 400;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptsg8zYS_SKggPNyCg4QIFqL_KWxWMT.woff2") format('woff2');
           unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: 'Raleway';
           font-style: italic;
           font-weight: 400;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptsg8zYS_SKggPNyCg4SYFqL_KWxWMT.woff2") format('woff2');
           unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: 'Raleway';
           font-style: italic;
           font-weight: 400;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptsg8zYS_SKggPNyCg4QoFqL_KWxWMT.woff2") format('woff2');
           unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: 'Raleway';
           font-style: italic;
           font-weight: 400;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptsg8zYS_SKggPNyCg4Q4FqL_KWxWMT.woff2") format('woff2');
           unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: 'Raleway';
           font-style: italic;
           font-weight: 400;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptsg8zYS_SKggPNyCg4TYFqL_KWxQ.woff2") format('woff2');
           unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: 'Raleway';
           font-style: italic;
           font-weight: 700;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptsg8zYS_SKggPNyCg4QIFqL_KWxWMT.woff2") format('woff2');
           unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: 'Raleway';
           font-style: italic;
           font-weight: 700;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptsg8zYS_SKggPNyCg4SYFqL_KWxWMT.woff2") format('woff2');
           unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: 'Raleway';
           font-style: italic;
           font-weight: 700;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptsg8zYS_SKggPNyCg4QoFqL_KWxWMT.woff2") format('woff2');
           unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: 'Raleway';
           font-style: italic;
           font-weight: 700;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptsg8zYS_SKggPNyCg4Q4FqL_KWxWMT.woff2") format('woff2');
           unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: 'Raleway';
           font-style: italic;
           font-weight: 700;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptsg8zYS_SKggPNyCg4TYFqL_KWxQ.woff2") format('woff2');
           unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: 'Raleway';
           font-style: normal;
           font-weight: 400;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptug8zYS_SKggPNyCAIT4ttDfCmxA.woff2") format('woff2');
           unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: 'Raleway';
           font-style: normal;
           font-weight: 400;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptug8zYS_SKggPNyCkIT4ttDfCmxA.woff2") format('woff2');
           unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: 'Raleway';
           font-style: normal;
           font-weight: 400;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptug8zYS_SKggPNyCIIT4ttDfCmxA.woff2") format('woff2');
           unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: 'Raleway';
           font-style: normal;
           font-weight: 400;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptug8zYS_SKggPNyCMIT4ttDfCmxA.woff2") format('woff2');
           unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: 'Raleway';
           font-style: normal;
           font-weight: 400;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptug8zYS_SKggPNyC0IT4ttDfA.woff2") format('woff2');
           unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: 'Raleway';
           font-style: normal;
           font-weight: 700;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptug8zYS_SKggPNyCAIT4ttDfCmxA.woff2") format('woff2');
           unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: 'Raleway';
           font-style: normal;
           font-weight: 700;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptug8zYS_SKggPNyCkIT4ttDfCmxA.woff2") format('woff2');
           unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: 'Raleway';
           font-style: normal;
           font-weight: 700;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptug8zYS_SKggPNyCIIT4ttDfCmxA.woff2") format('woff2');
           unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: 'Raleway';
           font-style: normal;
           font-weight: 700;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptug8zYS_SKggPNyCMIT4ttDfCmxA.woff2") format('woff2');
           unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: 'Raleway';
           font-style: normal;
           font-weight: 700;
           src: url("//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptug8zYS_SKggPNyC0IT4ttDfA.woff2") format('woff2');
           unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: "Avenir-LT-W01_35-Light1475496";
           src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/edefe737-dc78-4aa3-ad03-3c6f908330ed.eot?#iefix");
           src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/edefe737-dc78-4aa3-ad03-3c6f908330ed.eot?#iefix") format("eot"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/0078f486-8e52-42c0-ad81-3c8d3d43f48e.woff2") format("woff2"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/908c4810-64db-4b46-bb8e-823eb41f68c0.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/4577388c-510f-4366-addb-8b663bcc762a.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/b0268c31-e450-4159-bfea-e0d20e2b5c0c.svg#b0268c31-e450-4159-bfea-e0d20e2b5c0c") format("svg");
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: "Avenir-LT-W05_35-Light";
           src: url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Avenir_Family_Pack/v1/AvenirLTW05-35Light.woff2") format("woff2"),
-          url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Avenir_Family_Pack/v1/AvenirLTW05-35Light.woff") format("woff");
+            url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Avenir_Family_Pack/v1/AvenirLTW05-35Light.woff") format("woff");
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: "Avenir-LT-W01_85-Heavy1475544";
           src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix");
           src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix") format("eot"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/d513e15e-8f35-4129-ad05-481815e52625.woff2") format("woff2"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/61bd362e-7162-46bd-b67e-28f366c4afbe.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/ccd17c6b-e7ed-4b73-b0d2-76712a4ef46b.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/20577853-40a7-4ada-a3fb-dd6e9392f401.svg#20577853-40a7-4ada-a3fb-dd6e9392f401") format("svg");
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: "Avenir-LT-W05_85-Heavy";
           src: url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Avenir_Family_Pack/v1/AvenirLTW05-85Heavy.woff2") format("woff2"),
-          url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Avenir_Family_Pack/v1/AvenirLTW05-85Heavy.woff") format("woff");
+            url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Avenir_Family_Pack/v1/AvenirLTW05-85Heavy.woff") format("woff");
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: "Helvetica-W01-Bold";
           src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/f70da45a-a05c-490c-ad62-7db4894b012a.eot?#iefix");
           src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/f70da45a-a05c-490c-ad62-7db4894b012a.eot?#iefix") format("eot"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/c5749443-93da-4592-b794-42f28d62ef72.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/73805f15-38e4-4fb7-8a08-d56bf29b483b.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/874bbc4a-0091-49f0-93ef-ea4e69c3cc7a.svg#874bbc4a-0091-49f0-93ef-ea4e69c3cc7a") format("svg");
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: "Helvetica-W02-Bold";
           src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/8c0d8b0f-d7d6-4a72-a418-c2373e4cbf27.eot?#iefix");
           src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/8c0d8b0f-d7d6-4a72-a418-c2373e4cbf27.eot?#iefix") format("eot"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/192dac76-a6d9-413d-bb74-22308f2e0cc5.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/47584448-98c4-436c-89b9-8d6fbeb2a776.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/375c70e5-6822-492b-8408-7cd350440af7.svg#375c70e5-6822-492b-8408-7cd350440af7") format("svg");
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: "Helvetica-LT-W10-Bold";
           src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/9fe262dc-5a55-4d75-91a4-aed76bd32190.eot?#iefix");
           src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/9fe262dc-5a55-4d75-91a4-aed76bd32190.eot?#iefix") format("eot"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/0a3939d0-3833-4db3-8b85-f64c2b3350d2.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/1b128d6d-126f-4c9c-8f87-3e7d30a1671c.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/b791c850-fde1-48b3-adf0-8998d55b0866.svg#b791c850-fde1-48b3-adf0-8998d55b0866") format("svg");
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: "Helvetica-W01-Light";
           src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/717f8140-20c9-4892-9815-38b48f14ce2b.eot?#iefix");
           src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/717f8140-20c9-4892-9815-38b48f14ce2b.eot?#iefix") format("eot"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/03805817-4611-4dbc-8c65-0f73031c3973.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/d5f9f72d-afb7-4c57-8348-b4bdac42edbb.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/05ad458f-263b-413f-b054-6001a987ff3e.svg#05ad458f-263b-413f-b054-6001a987ff3e") format("svg");
           font-display: block;
-          }
-          @font-face {
+        }
+
+        @font-face {
           font-family: "Helvetica-W02-Light";
           src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/ff80873b-6ac3-44f7-b029-1b4111beac76.eot?#iefix");
           src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/ff80873b-6ac3-44f7-b029-1b4111beac76.eot?#iefix") format("eot"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/80c34ad2-27c2-4d99-90fa-985fd64ab81a.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/b8cb02c2-5b58-48d8-9501-8d02869154c2.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/92c941ea-2b06-4b72-9165-17476d424d6c.svg#92c941ea-2b06-4b72-9165-17476d424d6c") format("svg");
           font-display: block;
-          }
-        </style>
-        <div id="site-root" class="site-root">
-          <div id="masterPage" data-view-mode="preview" class="mesh-layout masterPage">
-            <!-- popups for project details -->
-            <header class="SITE_HEADER_WRAPPER" tabindex="-1" id="SITE_HEADER_WRAPPER">
-              <div id="SITE_HEADER" tabindex="-1">
-                <div class="header-grid" style="height: 50px;">
-                  <div style="grid-column: 1 / span 3;">
-                    <p class="font_6 " style="text-align:left;line-height:1.41em;font-size:20px">
-                      <span class="color_45 "><span style="text-transform: uppercase;" class="">SANDHYA CHINNA
-                      PILLAI</span></span>
-                    </p>
-                  </div>
-                  <div style="grid-column: 5">
-                    <nav class="header-nav">
-                      <ul data-marginallchildren="true" style="text-align: right;">
-                        <li id="comp-home" data-direction="ltr" data-listposition="center"
-                          data-state="menu selected  link" data-index="0" data-original-gap-between-text-and-btn="0"
-                          aria-hidden="false">
-                          <a class="nav-link nav-fade-up" data-testid="linkElement" href="#" target="_self"
-                            aria-haspopup="false" onclick="showContent('Home')">
-                            <div class="">
-                              <p id="comp-homelabel" class="header-nav">Home</p>
-                            </div>
-                          </a>
-                        </li>
-                        <li id="comp-about" data-direction="ltr" data-listposition="center" data-state="menu false  link"
-                          data-index="1" data-original-gap-between-text-and-btn="0" aria-hidden="false">
-                          <a class="nav-link nav-fade-up" data-testid="linkElement" href="#" target="_self"
-                            aria-haspopup="false" onclick="showContent('About')">
-                            <div class="">
-                              <p class="header-nav" id="comp-aboutlabel">About</p>
-                            </div>
-                          </a>
-                        </li>
-                        <li id="comp-Projects" data-direction="ltr" data-listposition="center"
-                          data-state="menu selected  link" data-index="2" data-original-gap-between-text-and-btn="0"
-                          aria-hidden="false">
-                          <a class="nav-link nav-fade-up" data-testid="linkElement" href="#" target="_self"
-                            aria-haspopup="false" onclick="showContent('Projects')">
-                            <div class="">
-                              <p id="comp-Projectslabel" class="header-nav">Projects</p>
-                            </div>
-                          </a>
-                        </li>
-                        <li id="comp-art" data-direction="ltr" data-listposition="center" data-state="menu selected  link"
-                          data-index="3" data-original-gap-between-text-and-btn="0" aria-hidden="false">
-                          <a class="nav-link nav-fade-up" data-testid="linkElement" href="#" target="_self"
-                            aria-haspopup="false" onclick="showContent('Art')">
-                            <div class="">
-                              <p id="comp-artlabel" class="header-nav">Interests</p>
-                            </div>
-                          </a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                  <div style="grid-column: 6; display: flex;
+        }
+      </style>
+      <div id="site-root" class="site-root">
+        <div id="masterPage" data-view-mode="preview" class="mesh-layout masterPage">
+          <!-- popups for project details -->
+          <header class="SITE_HEADER_WRAPPER" tabindex="-1" id="SITE_HEADER_WRAPPER">
+            <div id="SITE_HEADER" tabindex="-1">
+              <div class="header-grid" style="height: 50px;">
+                <div style="grid-column: 1 / span 3;">
+                  <p class="font_6 " style="text-align:left;line-height:1.41em;font-size:20px">
+                    <span class="color_45 "><span style="text-transform: uppercase;" class="">SANDHYA CHINNA
+                        PILLAI</span></span>
+                  </p>
+                </div>
+                <div style="grid-column: 5">
+                  <nav class="header-nav">
+                    <ul data-marginallchildren="true" style="text-align: right;">
+                      <li id="comp-home" data-direction="ltr" data-listposition="center"
+                        data-state="menu selected  link" data-index="0" data-original-gap-between-text-and-btn="0"
+                        aria-hidden="false">
+                        <a class="nav-link nav-fade-up" data-testid="linkElement" href="#" target="_self"
+                          aria-haspopup="false" onclick="showContent('Home')">
+                          <div class="">
+                            <p id="comp-homelabel" class="header-nav">Home</p>
+                          </div>
+                        </a>
+                      </li>
+                      <li id="comp-about" data-direction="ltr" data-listposition="center" data-state="menu false  link"
+                        data-index="1" data-original-gap-between-text-and-btn="0" aria-hidden="false">
+                        <a class="nav-link nav-fade-up" data-testid="linkElement" href="#" target="_self"
+                          aria-haspopup="false" onclick="showContent('About')">
+                          <div class="">
+                            <p class="header-nav" id="comp-aboutlabel">About</p>
+                          </div>
+                        </a>
+                      </li>
+                      <li id="comp-Projects" data-direction="ltr" data-listposition="center"
+                        data-state="menu selected  link" data-index="2" data-original-gap-between-text-and-btn="0"
+                        aria-hidden="false">
+                        <a class="nav-link nav-fade-up" data-testid="linkElement" href="#" target="_self"
+                          aria-haspopup="false" onclick="showContent('Projects')">
+                          <div class="">
+                            <p id="comp-Projectslabel" class="header-nav">Projects</p>
+                          </div>
+                        </a>
+                      </li>
+                      <li id="comp-art" data-direction="ltr" data-listposition="center" data-state="menu selected  link"
+                        data-index="3" data-original-gap-between-text-and-btn="0" aria-hidden="false">
+                        <a class="nav-link nav-fade-up" data-testid="linkElement" href="#" target="_self"
+                          aria-haspopup="false" onclick="showContent('Art')">
+                          <div class="">
+                            <p id="comp-artlabel" class="header-nav">Interests</p>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <div style="grid-column: 6; display: flex;
                     justify-content: center;
                     align-items: start; ">
-                    <nav class="header-nav">
-                      <ul data-marginallchildren="true" style="text-align: right;">
-                        <li data-direction="ltr" data-listposition="center" data-state="menu selected  link"
-                          data-index="0" data-original-gap-between-text-and-btn="0" aria-hidden="false">
-                          <a href="https://www.linkedin.com/in/sandhya-c-37030b7b/" target="_blank"
-                            rel="noreferrer noopener">
+                  <nav class="header-nav">
+                    <ul data-marginallchildren="true" style="text-align: right;">
+                      <li data-direction="ltr" data-listposition="center" data-state="menu selected  link"
+                        data-index="0" data-original-gap-between-text-and-btn="0" aria-hidden="false">
+                        <a href="https://www.linkedin.com/in/sandhya-c-37030b7b/" target="_blank"
+                          rel="noreferrer noopener">
                           <i class='fa fa-linkedin' style="color: white;"></i>
-                          </a>
-                        </li>
-                        <li data-direction="ltr" data-listposition="center" data-state="menu selected  link"
-                          data-index="0" data-original-gap-between-text-and-btn="0" aria-hidden="false">
-                          <a href="https://github.com/SandhyaChinnaPillai" target="_blank" rel="noreferrer noopener"
-                            class="oRtuWN"><i class="fa fa-link" style="color: #ffffff;"></i></a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
+                        </a>
+                      </li>
+                      <li data-direction="ltr" data-listposition="center" data-state="menu selected  link"
+                        data-index="0" data-original-gap-between-text-and-btn="0" aria-hidden="false">
+                        <a href="https://github.com/SandhyaChinnaPillai" target="_blank" rel="noreferrer noopener"
+                          class="oRtuWN"><i class="fa fa-link" style="color: #ffffff;"></i></a>
+                      </li>
+                    </ul>
+                  </nav>
                 </div>
               </div>
-            </header>
-            <main id="PAGES_CONTAINER" class="PAGES_CONTAINER" tabindex="-1" data-main-content="true">
-              <div id="SITE_PAGES" data-page-transition="OutIn" class="JshATs SITE_PAGES">
-                <div id="SITE_PAGES_TRANSITION_GROUP" class="fcNEqv">
-                  <!--Home-->
-                  <div id="Home" class="Section Home active">
-                    <div class="PFkO7r" data-testid="page-bg"></div>
-                    <div id="home_grid"
-                      style="--bg-overlay-color: transparent; box-sizing: border-box; position: relative;">
-                      <img src="assets/images/Laptop.jpeg" style="width: 100%; height: 860px; object-fit: cover;">
-                      <div class="half-half-grid">
-                        <div
-                          style="grid-column: 2 / span 1; background-color: rgba(0, 0, 0, 0.5); color: #fff; width:100%; height:100%;">
-                          <div id="home-text-container" style="margin-top: 30%;margin-left: 22%;margin-right: 25%;">
-                            <h1 class="font_2 " style="line-height:1.25em;font-size:65px; ">
-                              <span class="color_45"><span style="text-transform: uppercase;">I’M
-                              SANDHYA CHINNA PILLAI</span></span>
-                            </h1>
-                            <p class="font_7 " style="line-height:1.67em;font-size:20px">
-                              <span class="color_white ">Explore My
+            </div>
+          </header>
+          <main id="PAGES_CONTAINER" class="PAGES_CONTAINER" tabindex="-1" data-main-content="true">
+            <div id="SITE_PAGES" data-page-transition="OutIn" class="JshATs SITE_PAGES">
+              <div id="SITE_PAGES_TRANSITION_GROUP" class="fcNEqv">
+                <!--Home-->
+                <div id="Home" class="Section Home active">
+                  <div class="PFkO7r" data-testid="page-bg"></div>
+                  <div id="home_grid"
+                    style="--bg-overlay-color: transparent; box-sizing: border-box; position: relative;">
+                    <img src="assets/images/Laptop.jpeg" style="width: 100%; height: 860px; object-fit: cover;">
+                    <div class="half-half-grid">
+                      <div
+                        style="grid-column: 2 / span 1; background-color: rgba(0, 0, 0, 0.5); color: #fff; width:100%; height:100%;">
+                        <div id="home-text-container" style="margin-top: 30%;margin-left: 22%;margin-right: 25%;">
+                          <h1 class="font_2 " style="line-height:1.25em;font-size:65px; ">
+                            <span class="color_45"><span style="text-transform: uppercase;">I’M
+                                SANDHYA CHINNA PILLAI</span></span>
+                          </h1>
+                          <p class="font_7 " style="line-height:1.67em;font-size:20px">
+                            <span class="color_white ">Explore My
                               Work</span>
-                            </p>
-                          </div>
+                          </p>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <!--About section-->
-                  <div id="About" class="Section About">
-                    <section id="About-section">
-                      <div id="About-section-background">
-                        <img alt="" fetchpriority="high" src="assets/images/About_background.jpeg"
-                          style=" width: 100%; height: 446px; object-fit: cover;">
-                      </div>
-                      <div class="about-grid">
-                        <img src="assets/images/rajasthanpic.jpg">
-                        <div id="" style="background-color: black;">
-                          <div class="about-info">
-                            <h1 class="font_4" style="font-size:24px"><span style="font-size:26px;">Sandhya Chinna
+                </div>
+                <!--About section-->
+                <div id="About" class="Section About">
+                  <section id="About-section">
+                    <div id="About-section-background">
+                      <img alt="" fetchpriority="high" src="assets/images/About_background.jpeg"
+                        style=" width: 100%; height: 446px; object-fit: cover;">
+                    </div>
+                    <div class="about-grid">
+                      <img src="assets/images/rajasthanpic.jpg">
+                      <div id="" style="background-color: black;">
+                        <div class="about-info">
+                          <h1 class="font_4" style="font-size:24px"><span style="font-size:26px;">Sandhya Chinna
                               Pillai</span>
-                            </h1>
-                            <p class="font_6" style="font-size:20px;"><span style="font-size:23px;">Software
+                          </h1>
+                          <p class="font_6" style="font-size:20px;"><span style="font-size:23px;">Software
                               Developer</span>
-                            </p>
-                            <p class="font_8 " style="font-size:15px; margin:8px;"><span style="font-size:16px">Phone:
+                          </p>
+                          <p class="font_8 " style="font-size:15px; margin:8px;"><span style="font-size:16px">Phone:
                               </br> +1(607)697-5734</span>
-                            </p>
-                            <p class="font_8 " style="font-size:15px; margin:8px;"><span style="font-size:16px">Email:
+                          </p>
+                          <p class="font_8 " style="font-size:15px; margin:8px;"><span style="font-size:16px">Email:
                               </br> pillai.sandhya25@gmail.com</span>
-                            </p>
-                            <p class="font_8 " style="font-size:15px; margin:8px;"><span style="font-size:16px">
+                          </p>
+                          <p class="font_8 " style="font-size:15px; margin:8px;"><span style="font-size:16px">
                               Address: </br> 215 Ridgedale Rd </br> Ithaca, NY
                               14850</span>
-                            </p>
-                            <p class="font_8 " style="font-size:15px; margin:8px;"><span style="font-size:16px">Date of
+                          </p>
+                          <p class="font_8 " style="font-size:15px; margin:8px;"><span style="font-size:16px">Date of
                               birth: </br> 25th June 1998</span>
-                            </p>
-                          </div>
+                          </p>
                         </div>
                       </div>
-                      <div class="about-me">
-                        <h2 class="font_2 "
-                          style="display: inline-block; margin:35px; font-size:38px; line-height:normal">
-                          <span style="letter-spacing:normal"><span style="font-size:38px;">A Bit About
-                          Me</span></span>
-                        </h2>
-                        <p class="font_8" style="font-size:16px; line-height:1.8em; margin-bottom: 25px;">
-                          <span style="letter-spacing:normal;"><span style="font-size:16px">I'm a Software Developer with
-                          3 years
-                          of experience in full-stack development, AI/ML, and computer vision.
-                          Proficient in cross-border project execution and implementing agile methodology for design,
-                          development, and product testing.<br>
+                    </div>
+                    <div class="about-me">
+                      <h2 class="font_2 "
+                        style="display: inline-block; margin:35px; font-size:38px; line-height:normal">
+                        <span style="letter-spacing:normal"><span style="font-size:38px;">A Bit About
+                            Me</span></span>
+                      </h2>
+                      <p class="font_8" style="font-size:16px; line-height:1.8em; margin-bottom: 25px;">
+                        <span style="letter-spacing:normal;"><span style="font-size:16px">I'm a Software Developer with
+                            3 years
+                            of experience in full-stack development, AI/ML, and computer vision.
+                            Proficient in cross-border project execution and implementing agile methodology for design,
+                            development, and product testing.<br>
                           </span></span>
-                        </p>
-                        <a  href="https://drive.google.com/file/d/1jpx-oM_GGVJ4ZUfq_KTUNra__A2OMof5/view?usp=share_link"
-                          target="_blank">RESUME PREVIEW</a>
-                      </div>
-                      <hr class="horizontal-line">
-                      <h2 class="font_2 "
-                        style="display: inline-block; margin-left: 20%; font-size:38px; line-height:normal">
-                        <span style="letter-spacing:normal"><span style="font-size:38px;">Work Experience</span></span>
-                      </h2>
-                      <hr class="horizontal-line" onclick="">
-                      <div class="timeline-container" onclick="">
-                        <div class="timeline" onclick="">
-                          <ul>
-                            <li>
-                              <div class="timeline-content" onclick="">
-                                <h3 class="date">July 2023 - Present</h3>
-                                <h1>AI Fellowship Mentor | Veritas AI</h1>
-                                <p>Leading a mentorship program focused on machine learning for high school students.
-                                  Guiding the development of individual AI projects, fostering skills in data preprocessing, 
-                                  visualization, and model building.
-                                  Facilitating practical learning experiences through one-on-one mentorship sessions.
-                                </p>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="timeline-content" onclick="">
-                                <h3 class="date">July 2023 - Sep 2023</h3>
-                                <h1>Data Science Intern | Greenbox Capital</h1>
-                                <p>Engineered a predictive ML model,for conversion rates, enhancing loan approval processes.
-                                  Innovated a Vue.js dashboard for marketing analytics, incorporating demographic and 
-                                  economic indicators to predict loan request patterns.
-                                  Advanced the system's infrastructure by implementing containerized solutions with Docker
-                                  and Kubernetes for an efficient data extraction pipeline.
-                                </p>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="timeline-content" onclick="">
-                                <h3 class="date">Jan 2023 - June 2023</h3>
-                                <h1>Graduate Student Researcher | Cornell University</h1>
-                                <p>Served as a developer for a Computer Vision project aimed at localized identification
-                                  of emission sources for air quality management. Created pipeline for segmentation and
-                                  tracking of vehicles by optimizing YOLO & SORT algorithms.
-                                  Optimized the code to handle occlusion issues and calibrate emission levels.
-                                </p>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="timeline-content">
-                                <h3 class="date">Sep 2020 - July 2022</h3>
-                                <h1>Associate Software Developer | Q2 Software, Inc.</h1>
-                                <p>Delivered high-quality solutions for over 7 full stack projects in collaboration with
-                                  functional stakeholders aiding critical lending solutions to banks. 
-                                  Identified and resolved code performance issues by conducting in-depth reviews of 
-                                  configuration files, logs and SQL queries.
-                                  Recognized with the “Prevailed Persistence Award” for outstanding performance and 
-                                  customer support.
-                                </p>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="timeline-content" onclick="">
-                                <h3 class="date">Jan 2020 - Aug 2020</h3>
-                                <h1>Software Development Intern | Q2 Software, Inc.</h1>
-                                <p>Contributed to robust web application development, crafting a custom JSON editor 
-                                  and a performance analytics dashboard.
-                                  Played a critical role in streamlining the request-response cycle, facilitating a 
-                                  more efficient development workflow.
-                                </p>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <hr class="horizontal-line">
-                      <h2 class="font_2 "
-                        style="display: inline-block; margin-left: 20%; font-size:38px; line-height:normal">
-                        <span style="letter-spacing:normal"><span style="font-size:38px;">SKILLS</span></span>
-                      </h2>
-                      <hr class="horizontal-line" onclick="">
-                      <div class="skill-container flex1">
-                        <div class="skills-grid">
-                          <div class="skills-grid-1">
-                            <div class="circle_box">
-                              <svg class="skill-circle" height="150" width="150">
-                                <circle cx="-40" cy="10" r="48" style="stroke-dasharray: 300px;"
-                                  transform="translate(50,50) rotate(-90)"></circle>
-                                <text id="text1" x="40" y="100" fill="#fff" font-family="Verdana" font-size="28">90</text>
-                              </svg>
-                              <h4>Java</h4>
-                            </div>
-                            <div class="circle_box">
-                              <svg class="skill-circle" height="150" width="150">
-                                <circle cx="-40" cy="10" r="48" style="stroke-dasharray: 300px;"
-                                  transform="translate(50,50) rotate(-90)"></circle>
-                                <text id="text1" x="40" y="100" fill="#fff" font-family="Verdana" font-size="28">90</text>
-                              </svg>
-                              <h4>Javascript </h4>
-                            </div>
-                            <div class="circle_box">
-                              <svg class="skill-circle" height="150" width="150">
-                                <circle cx="-40" cy="10" r="48" style="stroke-dasharray: 275px;"
-                                  transform="translate(50,50) rotate(-90)"></circle>
-                                <text id="text1" x="40" y="100" fill="#fff" font-family="Verdana" font-size="28">80</text>
-                              </svg>
-                              <h4>HTML/CSS </h4>
-                            </div>
-                            <div class="circle_box">
-                              <svg class="skill-circle" height="150" width="150">
-                                <circle cx="-40" cy="10" r="48" style="stroke-dasharray: 244px;"
-                                  transform="translate(50,50) rotate(-90)"></circle>
-                                <text id="text1" x="40" y="100" fill="#fff" font-family="Verdana" font-size="28">70</text>
-                              </svg>
-                              <h4>C++ </h4>
-                            </div>
-                            <div class="circle_box" style="grid-row: 2;">
-                              <svg class="skill-circle" height="150" width="150">
-                                <circle cx="-40" cy="10" r="48" style="stroke-dasharray: 244px;"
-                                  transform="translate(50,50) rotate(-90)"></circle>
-                                <text id="text1" x="40" y="100" fill="#fff" font-family="Verdana" font-size="28">70</text>
-                              </svg>
-                              <h4>Springboot</h4>
-                            </div>
-                            <div class="circle_box" style="grid-row: 2;">
-                              <svg class="skill-circle" height="150" width="150">
-                                <circle cx="-40" cy="10" r="48" style="stroke-dasharray: 300px;"
-                                  transform="translate(50,50) rotate(-90)"></circle>
-                                <text id="text1" x="40" y="100" fill="#fff" font-family="Verdana" font-size="28">90</text>
-                              </svg>
-                              <h4>Python </h4>
-                            </div>
-                            <div class="circle_box" style="grid-row: 2;">
-                              <svg class="skill-circle" height="150" width="150">
-                                <circle cx="-40" cy="10" r="48" style="stroke-dasharray: 224px;"
-                                  transform="translate(50,50) rotate(-90)"></circle>
-                                <text id="text1" x="40" y="100" fill="#fff" font-family="Verdana" font-size="28">65</text>
-                              </svg>
-                              <h4>Azure</h4>
-                            </div>
-                            <div class="circle_box" style="grid-row: 2;">
-                              <svg class="skill-circle" height="150" width="150">
-                                <circle cx="-40" cy="10" r="48" style="stroke-dasharray: 300px;"
-                                  transform="translate(50,50) rotate(-90)"></circle>
-                                <text id="text1" x="40" y="100" fill="#fff" font-family="Verdana" font-size="28">90</text>
-                              </svg>
-                              <h4>SQL</h4>
-                            </div>
-                          </div>
-                          <!-- line skill bars-->
-                          <div class="line_content" 
-                            style="grid-column: 2; padding-top: 36px;color: white;/* padding-left: 64px; */margin-left: 71px;">
-                            <div class="line">
-                              <p >GIT</p>
-                              <div class="bar">
-                                <div class="line_bar git"> </div>
-                              </div>
-                              <h5>90</h5>
-                            </div>
-                            <div class="line" >
-                              <p>Salesforce CRM</p>
-                              <div class="bar">
-                                <div class="line_bar Salesforce"></div>
-                              </div>
-                              <h5>90</h5>
-                            </div>
-                            <div class="line">
-                              <p>Figma</p>
-                              <div class="bar">
-                                <div class="line_bar figma"> </div>
-                              </div>
-                              <h5>65</h5>
-                            </div>
-                            <div class="line">
-                              <p>Neo4J</p>
-                              <div class="bar">
-                                <div class="line_bar neo"></div>
-                              </div>
-                              <h5>85</h5>
-                            </div>
-                          </div>
-                        </div>
-                    </section>
+                      </p>
+                      <a href="https://drive.google.com/file/d/1jpx-oM_GGVJ4ZUfq_KTUNra__A2OMof5/view?usp=share_link"
+                        target="_blank">RESUME PREVIEW</a>
                     </div>
-                    <!--Art-->
-                    <div id="Art" class="Section Art">
-                      <div class="PFkO7r" data-testid="page-bg"></div>
-                      <div class="HT5ybB">
-                        <div id="ContainerArt" class="ContainerArt">
-                          <div class="">
-                            <div>
-                              <section tabindex="-1">
-                                <div data-testid="inline-content" class="">
-                                  <div data-testid="mesh-container-content">
-                                    <div id="comp-artHeading0"
-                                      style="margin-left: 20%; margin-top: 55px; margin-bottom: 20px;">
-                                      <h1 class="font_0" style="font-size:56px;line-height:normal">
-                                        <span style="font-size:56px; --font-family: Roboto, sans-serf;">Art Work</span>
-                                      </h1>
-                                    </div>
-                                    <div id="comp-artParah"
-                                      style="margin-left: 20%; margin-bottom: 20px; width: 60%; text-align: justify;">
-                                      <p class="font_8 " style="font-size:16px; line-height:1.8em">
-                                        <span style="font-size:16px; --font-family: Roboto, sans-serf;">I find inspiration
-                                        in the delicate interplay of charcoal sketching, the vibrant hues of watercolour
-                                        painting, and the captivating allure of soft pastels. With a particular affinity
-                                        for capturing the human form, I embark on a creative journey that unveils
-                                        emotions, stories, and timeless beauty. Through my art, I strive to evoke a sense
-                                        of intrigue, inviting viewers to explore the depths of human expression.</span>
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </section>
-                              <!-- Art grid gallery-->
-                              <section id="image gallery">
-                                <div class="image-grid">
-                                  <img class="image-grid-row-2" src="assets/images/art4.jpg">
-                                  <img class="image-grid-col-3 image-grid-row-2" src="assets/images/art2.jpg">
-                                  <img class="image-grid-row-3 image-grid-col-2 " src="assets/images/art3.jpg">
-                                  <img class="image-grid-col-2 image-grid-row-2" src="assets/images/art13.jpeg">
-                                  <img class="image-grid-col-2 image-grid-row-3" src="assets/images/art12.jpg">
-                                  <img class="image-grid-col-2 image-grid-row-2" src="assets/images/art5.jpg">
-                                  <img class="image-grid-col-2 image-grid-row-3" src="assets/images/art1.jpg">
-                                  <img class=" image-grid-row-2" src="assets/images/art11.jpg">
-                                  <img class=" image-grid-col-2 image-grid-row-2" src="assets/images/art17.jpg">
-                                  <img class=" image-grid-row-2" src="assets/images/art16.jpg">
-                                </div>
-                              </section>
-                              <section>
-                                <div id="travel_photo">
-                                  <div id="artHeading1" style="margin-left: 20%; margin-top: 55px; margin-bottom: 20px;">
-                                    <h1 class="font_0" style="font-size:56px;line-height:normal">
-                                      <span style="font-size:56px; --font-family: Roboto, sans-serf;">Travel +
-                                      Photography</span>
-                                    </h1>
-                                  </div>
-                                  <div id="travelParah"
-                                    style="margin-left: 20%; margin-bottom: 20px; width: 60%; text-align: justify;">
-                                    <p class="font_8 " style="font-size:16px; line-height:1.8em">
-                                      <span style="font-size:16px; --font-family: Roboto, sans-serf;">As an avid traveler
-                                      and passionate photographer, I have had the incredible opportunity to explore over
-                                      50 cities around the world, immersing myself in diverse cultures and savoring unique
-                                      culinary experiences. From indulging in heavenly gelatos in Venice to savoring
-                                      handmade pasta in France, my journey has been a feast for the senses. I've wandered
-                                      through the grandeur of the Colosseum, felt the adrenaline rush of diving into the
-                                      crystal-clear waters of Meghalaya, and blissfully lounged on the soft sandy beaches
-                                      of Goa, sipping refreshing coconut water. One of my most cherished memories is
-                                      listening to enchanting folk music as the sun set over the breathtaking Thar Desert.
-                                      With each destination, I strive to capture these beautiful moments through my camera
-                                      lens, preserving memories that will last a lifetime. As I continue to explore the
-                                      world, my passion for travel and photography grows, driving me to seek out new
-                                      adventures and create captivating visual stories.</span>
-                                    </p>
-                                  </div>
-                                </div>
-                              </section>
-                              <section id="travel gallery">
-                                <div class="travel-grid">
-                                  <div class="travel-grid-row-2"></div>
-                                  <img class="travel-grid-col-3 travel-grid-row-2" src="assets/images/ButterflyBeach.jpg">
-                                  <img class="travel-grid-row-3 travel-grid-col-2 " src="assets/images/TharDEset.jpg">
-                                  <img class="travel-grid-col-2 travel-grid-row-2" src="assets/images/Meghalaya.jpg">
-                                  <img class="travel-grid-col-2 travel-grid-row-3" src="assets/images/BuildingLondon.jpg">
-                                  <img class="travel-grid-col-2 travel-grid-row-2" src="assets/images/dessertpic.jpg">
-                                  <img class="travel-grid-col-2 travel-grid-row-7" src="assets/images/rajasthanWater.jpg">
-                                  <img style="grid-row: 2 /span 4; grid-column: 9/ span 1;"
-                                    src="assets/images/LondonEye.jpg">
-                                  <img class=" travel-grid-col-2 travel-grid-row-2" src="assets/images/brklynBridge.jpg">
-                                  <img style="grid-row: 6 /span 4; grid-column: 9;" src="assets/images/megh_trek.jpg">
-                                  <img style="grid-row: 9 /span 4; grid-column: 3/ span 1;"
-                                    src="assets/images/IthacaSecondDam.jpg">
-                                  <img style="grid-row: 9 /span 4; grid-column: 4/ span 1;" src="assets/images/GoaCave.jpg">
-                                  <img style="grid-row: 11 /span 4; grid-column: 5/ span 2;"
-                                    src="assets/images/cherryBlossom.jpg">
-                                </div>
-                              </section>
+                    <hr class="horizontal-line">
+                    <h2 class="font_2 "
+                      style="display: inline-block; margin-left: 20%; font-size:38px; line-height:normal">
+                      <span style="letter-spacing:normal"><span style="font-size:38px;">Work Experience</span></span>
+                    </h2>
+                    <hr class="horizontal-line" onclick="">
+                    <div class="timeline-container" onclick="">
+                      <div class="timeline" onclick="">
+                        <ul>
+                          <li>
+                            <div class="timeline-content" onclick="">
+                              <h3 class="date">Jan 2024 - Present</h3>
+                              <h1>Software Engineer | Zinnia Health</h1>
+                              <p>Developed a CoPilot application in a Typescript-based monorepo that integrates AI to
+                                assist
+                                clinicians in efficiently generating high-quality clinical notes.
+                                Refactored a Next.js full-stack architecture to utilize a Fastify-powered Node.js server
+                                that
+                                now handles up to 1M requests per month, enhancing performance and scalability.
+                                Maintained and improved a BedBoard application, a patient lifecycle management tool that
+                                tracks
+                                admissions, discharges, room assignments, and authorizations across multiple facilities.
+                              </p>
                             </div>
-                          </div>
-                        </div>
+                          </li>
+                          <li>
+                            <div class="timeline-content" onclick="">
+                              <h3 class="date">July 2023 - Jan 2024</h3>
+                              <h1>AI Fellowship Mentor | Veritas AI</h1>
+                              <p>Leading a mentorship program focused on machine learning for high school students.
+                                Guiding the development of individual AI projects, fostering skills in data
+                                preprocessing,
+                                visualization, and model building.
+                                Facilitating practical learning experiences through one-on-one mentorship sessions.
+                              </p>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="timeline-content" onclick="">
+                              <h3 class="date">July 2023 - Sep 2023</h3>
+                              <h1>Data Science Intern | Greenbox Capital</h1>
+                              <p>Engineered a predictive ML model,for conversion rates, enhancing loan approval
+                                processes.
+                                Innovated a Vue.js dashboard for marketing analytics, incorporating demographic and
+                                economic indicators to predict loan request patterns.
+                                Advanced the system's infrastructure by implementing containerized solutions with Docker
+                                and Kubernetes for an efficient data extraction pipeline.
+                              </p>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="timeline-content" onclick="">
+                              <h3 class="date">Jan 2023 - June 2023</h3>
+                              <h1>Graduate Student Researcher | Cornell University</h1>
+                              <p>Served as a developer for a Computer Vision project aimed at localized identification
+                                of emission sources for air quality management. Created pipeline for segmentation and
+                                tracking of vehicles by optimizing YOLO & SORT algorithms.
+                                Optimized the code to handle occlusion issues and calibrate emission levels.
+                              </p>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="timeline-content">
+                              <h3 class="date">Sep 2020 - July 2022</h3>
+                              <h1>Associate Software Developer | Q2 Software, Inc.</h1>
+                              <p>Delivered high-quality solutions for over 7 full stack projects in collaboration with
+                                functional stakeholders aiding critical lending solutions to banks.
+                                Identified and resolved code performance issues by conducting in-depth reviews of
+                                configuration files, logs and SQL queries.
+                                Recognized with the “Prevailed Persistence Award” for outstanding performance and
+                                customer support.
+                              </p>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="timeline-content" onclick="">
+                              <h3 class="date">Jan 2020 - Aug 2020</h3>
+                              <h1>Software Development Intern | Q2 Software, Inc.</h1>
+                              <p>Contributed to robust web application development, crafting a custom JSON editor
+                                and a performance analytics dashboard.
+                                Played a critical role in streamlining the request-response cycle, facilitating a
+                                more efficient development workflow.
+                              </p>
+                            </div>
+                          </li>
+                        </ul>
                       </div>
                     </div>
-                    <!-- Projects -->
-                    <div id="Projects" class="Section Projects">
-                      <div data-testid="page-bg"></div>
-                      <div>
-                        <div class="modal-wrap flex" id="modal-wrap">
-                          <div class="modal" id="modal">
-                            <div class="carousel-wrap" id="carousel-wrap" style="width:100%">
-                              <div class="window">
-                                <div id="carousel">
-                                  <div class="slide"></div>
-                                  <div class="slide"></div>
-                                  <div class="slide"></div>
-                                </div>
-                                <i class="mdi mdi-chevron-left" style="left:0;" id="prev">&#10094;</i>
-                                <i class="mdi mdi-chevron-right" id="next">&#10095;</i>
-                                <a class="close mdi mdi-close">&#10006;</a>
-                              </div>
-                            </div>
-                            <div class="info-box">
-                              <div class="title"></div>
-                              <div class="tag"></div>
-                              <div class="detail"></div>
-                              <a href="#" target="_blank"
-                                >
-                                <div class="button">
-                                  <i class="mdi mdi-open-in-new"></i>VIEW SITE
-                                </div>
-                              </a
-                                >
-                            </div>
+                    <hr class="horizontal-line">
+                    <h2 class="font_2 "
+                      style="display: inline-block; margin-left: 20%; font-size:38px; line-height:normal">
+                      <span style="letter-spacing:normal"><span style="font-size:38px;">SKILLS</span></span>
+                    </h2>
+                    <hr class="horizontal-line" onclick="">
+                    <div class="skill-container flex1">
+                      <div class="skills-grid">
+                        <div class="skills-grid-1">
+                          <div class="circle_box">
+                            <svg class="skill-circle" height="150" width="150">
+                              <circle cx="-40" cy="10" r="48" style="stroke-dasharray: 300px;"
+                                transform="translate(50,50) rotate(-90)"></circle>
+                              <text id="text1" x="40" y="100" fill="#fff" font-family="Verdana" font-size="28">90</text>
+                            </svg>
+                            <h4>Typescript </h4>
+                          </div>
+                          <div class="circle_box">
+                            <svg class="skill-circle" height="150" width="150">
+                              <circle cx="-40" cy="10" r="48" style="stroke-dasharray: 300px;"
+                                transform="translate(50,50) rotate(-90)"></circle>
+                              <text id="text1" x="40" y="100" fill="#fff" font-family="Verdana" font-size="28">90</text>
+                            </svg>
+                            <h4>React </h4>
+                          </div>
+                          <div class="circle_box">
+                            <svg class="skill-circle" height="150" width="150">
+                              <circle cx="-40" cy="10" r="48" style="stroke-dasharray: 275px;"
+                                transform="translate(50,50) rotate(-90)"></circle>
+                              <text id="text1" x="40" y="100" fill="#fff" font-family="Verdana" font-size="28">80</text>
+                            </svg>
+                            <h4>Node </h4>
+                          </div>
+                          <div class="circle_box">
+                            <svg class="skill-circle" height="150" width="150">
+                              <circle cx="-40" cy="10" r="48" style="stroke-dasharray: 200px;"
+                                transform="translate(50,50) rotate(-90)"></circle>
+                              <text id="text1" x="40" y="100" fill="#fff" font-family="Verdana" font-size="28">60</text>
+                            </svg>
+                            <h4>AI/ML </h4>
+                          </div>
+                          <div class="circle_box" style="grid-row: 2;">
+                            <svg class="skill-circle" height="150" width="150">
+                              <circle cx="-40" cy="10" r="48" style="stroke-dasharray: 300px;"
+                                transform="translate(50,50) rotate(-90)"></circle>
+                              <text id="text1" x="40" y="100" fill="#fff" font-family="Verdana" font-size="28">90</text>
+                            </svg>
+                            <h4>Postgres </h4>
+                          </div>
+                          <div class="circle_box" style="grid-row: 2;">
+                            <svg class="skill-circle" height="150" width="150">
+                              <circle cx="-40" cy="10" r="48" style="stroke-dasharray: 300px;"
+                                transform="translate(50,50) rotate(-90)"></circle>
+                              <text id="text1" x="40" y="100" fill="#fff" font-family="Verdana" font-size="28">90</text>
+                            </svg>
+                            <h4>Mongo </h4>
+                          </div>
+                          <div class="circle_box" style="grid-row: 2;">
+                            <svg class="skill-circle" height="150" width="150">
+                              <circle cx="-40" cy="10" r="48" style="stroke-dasharray: 224px;"
+                                transform="translate(50,50) rotate(-90)"></circle>
+                              <text id="text1" x="40" y="100" fill="#fff" font-family="Verdana" font-size="28">70</text>
+                            </svg>
+                            <h4>Python </h4>
+                          </div>
+                          <div class="circle_box" style="grid-row: 2;">
+                            <svg class="skill-circle" height="150" width="150">
+                              <circle cx="-40" cy="10" r="48" style="stroke-dasharray: 224px;"
+                                transform="translate(50,50) rotate(-90)"></circle>
+                              <text id="text1" x="40" y="100" fill="#fff" font-family="Verdana" font-size="28">70</text>
+                            </svg>
+                            <h4>Docker </h4>
                           </div>
                         </div>
-                        <div id="ContainerProjects" style="background-color: black; height: 70vh;">
-                          <div id="comp-projectHeading0" style="margin-left: 20%; margin-top: 55px; margin-bottom: 20px;">
-                            <h1 class="font_0" style="font-size:56px;line-height:normal">
-                              <span style="font-size:45px; --font-family: Roboto, sans-serf;">My Projects</span>
-                            </h1>
+                        <!-- line skill bars-->
+                        <div class="line_content"
+                          style="grid-column: 2; padding-top: 36px;color: white;/* padding-left: 64px; */margin-left: 71px;">
+                          <div class="line">
+                            <p>GIT</p>
+                            <div class="bar">
+                              <div class="line_bar git"> </div>
+                            </div>
+                            <h5>90</h5>
                           </div>
-                          <div id="project-list" class="project-list">
-                            <div class="work" onclick="">
-                              <img src="assets/images/cv-0.png">
-                              <div class="project-layer">
-                                <h3>Computer vision to identify emission sources</h3>
-                                <div id="cv" class="button" style="cursor: pointer;">Learn More</div>
-                              </div>
+                          <div class="line">
+                            <p>Salesforce CRM</p>
+                            <div class="bar">
+                              <div class="line_bar Salesforce"></div>
                             </div>
-                            <div class="work" onclick="">
-                              <img src="assets/images/GraphNetwork.jpg">
-                              <div class="project-layer">
-                                <h3>Sentiment Analysis using Neo4J</h3>
-                                <div id="sentimentAnalysis" class="button" style="cursor: pointer;">Learn More</div>
-                              </div>
-                            </div>
-                            <div class="work" onclick="">
-                              <img src="assets/images/ISL-0.png">
-                              <div class="project-layer">
-                                <h3>Bi-Directional Augmentative Communication</h3>
-                                <div id="ISL" class="button" style="cursor: pointer;">Learn More</div>
-                              </div>
-                            </div>
+                            <h5>90</h5>
                           </div>
+                          <div class="line">
+                            <p>Figma</p>
+                            <div class="bar">
+                              <div class="line_bar figma"> </div>
+                            </div>
+                            <h5>65</h5>
+                          </div>
+                          <div class="line">
+                            <p>Neo4J</p>
+                            <div class="bar">
+                              <div class="line_bar neo"></div>
+                            </div>
+                            <h5>85</h5>
+                          </div>
+                        </div>
+                      </div>
+                  </section>
+                </div>
+                <!--Art-->
+                <div id="Art" class="Section Art">
+                  <div class="PFkO7r" data-testid="page-bg"></div>
+                  <div class="HT5ybB">
+                    <div id="ContainerArt" class="ContainerArt">
+                      <div class="">
+                        <div>
+                          <section tabindex="-1">
+                            <div data-testid="inline-content" class="">
+                              <div data-testid="mesh-container-content">
+                                <div id="comp-artHeading0"
+                                  style="margin-left: 20%; margin-top: 55px; margin-bottom: 20px;">
+                                  <h1 class="font_0" style="font-size:56px;line-height:normal">
+                                    <span style="font-size:56px; --font-family: Roboto, sans-serf;">Art Work</span>
+                                  </h1>
+                                </div>
+                                <div id="comp-artParah"
+                                  style="margin-left: 20%; margin-bottom: 20px; width: 60%; text-align: justify;">
+                                  <p class="font_8 " style="font-size:16px; line-height:1.8em">
+                                    <span style="font-size:16px; --font-family: Roboto, sans-serf;">I find inspiration
+                                      in the delicate interplay of charcoal sketching, the vibrant hues of watercolour
+                                      painting, and the captivating allure of soft pastels. With a particular affinity
+                                      for capturing the human form, I embark on a creative journey that unveils
+                                      emotions, stories, and timeless beauty. Through my art, I strive to evoke a sense
+                                      of intrigue, inviting viewers to explore the depths of human expression.</span>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                          <!-- Art grid gallery-->
+                          <section id="image gallery">
+                            <div class="image-grid">
+                              <img class="image-grid-row-2" src="assets/images/art4.jpg">
+                              <img class="image-grid-col-3 image-grid-row-2" src="assets/images/art2.jpg">
+                              <img class="image-grid-row-3 image-grid-col-2 " src="assets/images/art3.jpg">
+                              <img class="image-grid-col-2 image-grid-row-2" src="assets/images/art13.jpeg">
+                              <img class="image-grid-col-2 image-grid-row-3" src="assets/images/art12.jpg">
+                              <img class="image-grid-col-2 image-grid-row-2" src="assets/images/art5.jpg">
+                              <img class="image-grid-col-2 image-grid-row-3" src="assets/images/art1.jpg">
+                              <img class=" image-grid-row-2" src="assets/images/art11.jpg">
+                              <img class=" image-grid-col-2 image-grid-row-2" src="assets/images/art17.jpg">
+                              <img class=" image-grid-row-2" src="assets/images/art16.jpg">
+                            </div>
+                          </section>
+                          <section>
+                            <div id="travel_photo">
+                              <div id="artHeading1" style="margin-left: 20%; margin-top: 55px; margin-bottom: 20px;">
+                                <h1 class="font_0" style="font-size:56px;line-height:normal">
+                                  <span style="font-size:56px; --font-family: Roboto, sans-serf;">Travel +
+                                    Photography</span>
+                                </h1>
+                              </div>
+                              <div id="travelParah"
+                                style="margin-left: 20%; margin-bottom: 20px; width: 60%; text-align: justify;">
+                                <p class="font_8 " style="font-size:16px; line-height:1.8em">
+                                  <span style="font-size:16px; --font-family: Roboto, sans-serf;">As an avid traveler
+                                    and passionate photographer, I have had the incredible opportunity to explore over
+                                    50 cities around the world, immersing myself in diverse cultures and savoring unique
+                                    culinary experiences. From indulging in heavenly gelatos in Venice to savoring
+                                    handmade pasta in France, my journey has been a feast for the senses. I've wandered
+                                    through the grandeur of the Colosseum, felt the adrenaline rush of diving into the
+                                    crystal-clear waters of Meghalaya, and blissfully lounged on the soft sandy beaches
+                                    of Goa, sipping refreshing coconut water. One of my most cherished memories is
+                                    listening to enchanting folk music as the sun set over the breathtaking Thar Desert.
+                                    With each destination, I strive to capture these beautiful moments through my camera
+                                    lens, preserving memories that will last a lifetime. As I continue to explore the
+                                    world, my passion for travel and photography grows, driving me to seek out new
+                                    adventures and create captivating visual stories.</span>
+                                </p>
+                              </div>
+                            </div>
+                          </section>
+                          <section id="travel gallery">
+                            <div class="travel-grid">
+                              <div class="travel-grid-row-2"></div>
+                              <img class="travel-grid-col-3 travel-grid-row-2" src="assets/images/ButterflyBeach.jpg">
+                              <img class="travel-grid-row-3 travel-grid-col-2 " src="assets/images/TharDEset.jpg">
+                              <img class="travel-grid-col-2 travel-grid-row-2" src="assets/images/Meghalaya.jpg">
+                              <img class="travel-grid-col-2 travel-grid-row-3" src="assets/images/BuildingLondon.jpg">
+                              <img class="travel-grid-col-2 travel-grid-row-2" src="assets/images/dessertpic.jpg">
+                              <img class="travel-grid-col-2 travel-grid-row-7" src="assets/images/rajasthanWater.jpg">
+                              <img style="grid-row: 2 /span 4; grid-column: 9/ span 1;"
+                                src="assets/images/LondonEye.jpg">
+                              <img class=" travel-grid-col-2 travel-grid-row-2" src="assets/images/brklynBridge.jpg">
+                              <img style="grid-row: 6 /span 4; grid-column: 9;" src="assets/images/megh_trek.jpg">
+                              <img style="grid-row: 9 /span 4; grid-column: 3/ span 1;"
+                                src="assets/images/IthacaSecondDam.jpg">
+                              <img style="grid-row: 9 /span 4; grid-column: 4/ span 1;" src="assets/images/GoaCave.jpg">
+                              <img style="grid-row: 11 /span 4; grid-column: 5/ span 2;"
+                                src="assets/images/cherryBlossom.jpg">
+                            </div>
+                          </section>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-          </div>
-          </main>
-          <footer class="SITE_FOOTER_WRAPPER" tabindex="-1" id="SITE_FOOTER_WRAPPER">
-            <div id="SITE_FOOTER" class="SITE_FOOTER" style="background-color: black; margin-top:45px;" tabindex="-1">
-              <div class>
-                <div class="footerContents" style="padding: 25px;">
+                <!-- Projects -->
+                <div id="Projects" class="Section Projects">
+                  <div data-testid="page-bg"></div>
                   <div>
-                    <p class="font_6 " style="text-align:center;line-height:3.41em;font-size:22px"><span
-                      class="color_45 ">Sandhya Chinna Pillai</span></p>
-                    <nav class="header-nav" style="display: flex;
-                      justify-content: center;">
-                      <ul data-marginallchildren="true" style="text-align: center;">
-                        <li data-direction="ltr" data-listposition="center" data-state="menu selected  link" data-index="0"
-                          data-original-gap-between-text-and-btn="0" aria-hidden="false">
-                          <a href="https://www.linkedin.com/in/sandhya-c-37030b7b/" target="_blank"
-                            rel="noreferrer noopener">
-                          <i class='fa fa-linkedin' style="color: white;"></i>
+                    <div class="modal-wrap flex" id="modal-wrap">
+                      <div class="modal" id="modal">
+                        <div class="carousel-wrap" id="carousel-wrap" style="width:100%">
+                          <div class="window">
+                            <div id="carousel">
+                              <div class="slide"></div>
+                              <div class="slide"></div>
+                              <div class="slide"></div>
+                            </div>
+                            <i class="mdi mdi-chevron-left" style="left:0;" id="prev">&#10094;</i>
+                            <i class="mdi mdi-chevron-right" id="next">&#10095;</i>
+                            <a class="close mdi mdi-close">&#10006;</a>
+                          </div>
+                        </div>
+                        <div class="info-box">
+                          <div class="title"></div>
+                          <div class="tag"></div>
+                          <div class="detail"></div>
+                          <a href="#" target="_blank">
+                            <div class="button">
+                              <i class="mdi mdi-open-in-new"></i>VIEW SITE
+                            </div>
                           </a>
-                        </li>
-                        <li data-direction="ltr" data-listposition="center" data-state="menu selected  link" data-index="0"
-                          data-original-gap-between-text-and-btn="0" aria-hidden="false">
-                          <a href="https://github.com/SandhyaChinnaPillai" target="_blank" rel="noreferrer noopener"
-                            class="oRtuWN"><i class="fa fa-link" style="color: #ffffff;"></i></a>
-                        </li>
-                      </ul>
-                    </nav>
-                    <p class="font_9 " style="--height: 28px;text-align:center;line-height:1.875em;font-size:15px"><span
-                      class="color_white ">pillai.sandhya25@gmail.com</span></p>
-                    <p class="font_10 " style="--height: 42px;text-align:center;line-height:1.79em;font-size:14px"><span
-                      class="color_white ">©2023 by Sandhya-Chinna-Pillai.
-                      </span>
-                    </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="ContainerProjects" style="background-color: black; height: 70vh;">
+                      <div id="comp-projectHeading0" style="margin-left: 20%; margin-top: 55px; margin-bottom: 20px;">
+                        <h1 class="font_0" style="font-size:56px;line-height:normal">
+                          <span style="font-size:45px; --font-family: Roboto, sans-serf;">My Projects</span>
+                        </h1>
+                      </div>
+                      <div id="project-list" class="project-list">
+                        <div class="work" onclick="">
+                          <img src="assets/images/cv-0.png">
+                          <div class="project-layer">
+                            <h3>Computer vision to identify emission sources</h3>
+                            <div id="cv" class="button" style="cursor: pointer;">Learn More</div>
+                          </div>
+                        </div>
+                        <div class="work" onclick="">
+                          <img src="assets/images/GraphNetwork.jpg">
+                          <div class="project-layer">
+                            <h3>Sentiment Analysis using Neo4J</h3>
+                            <div id="sentimentAnalysis" class="button" style="cursor: pointer;">Learn More</div>
+                          </div>
+                        </div>
+                        <div class="work" onclick="">
+                          <img src="assets/images/ISL-0.png">
+                          <div class="project-layer">
+                            <h3>Bi-Directional Augmentative Communication</h3>
+                            <div id="ISL" class="button" style="cursor: pointer;">Learn More</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </footer>
         </div>
       </div>
+      </main>
+      <footer class="SITE_FOOTER_WRAPPER" tabindex="-1" id="SITE_FOOTER_WRAPPER">
+        <div id="SITE_FOOTER" class="SITE_FOOTER" style="background-color: black; margin-top:45px;" tabindex="-1">
+          <div class>
+            <div class="footerContents" style="padding: 25px;">
+              <div>
+                <p class="font_6 " style="text-align:center;line-height:3.41em;font-size:22px"><span
+                    class="color_45 ">Sandhya Chinna Pillai</span></p>
+                <nav class="header-nav" style="display: flex;
+                      justify-content: center;">
+                  <ul data-marginallchildren="true" style="text-align: center;">
+                    <li data-direction="ltr" data-listposition="center" data-state="menu selected  link" data-index="0"
+                      data-original-gap-between-text-and-btn="0" aria-hidden="false">
+                      <a href="https://www.linkedin.com/in/sandhya-c-37030b7b/" target="_blank"
+                        rel="noreferrer noopener">
+                        <i class='fa fa-linkedin' style="color: white;"></i>
+                      </a>
+                    </li>
+                    <li data-direction="ltr" data-listposition="center" data-state="menu selected  link" data-index="0"
+                      data-original-gap-between-text-and-btn="0" aria-hidden="false">
+                      <a href="https://github.com/SandhyaChinnaPillai" target="_blank" rel="noreferrer noopener"
+                        class="oRtuWN"><i class="fa fa-link" style="color: #ffffff;"></i></a>
+                    </li>
+                  </ul>
+                </nav>
+                <p class="font_9 " style="--height: 28px;text-align:center;line-height:1.875em;font-size:15px"><span
+                    class="color_white ">pillai.sandhya25@gmail.com</span></p>
+                <p class="font_10 " style="--height: 42px;text-align:center;line-height:1.79em;font-size:14px"><span
+                    class="color_white ">©2023 by Sandhya-Chinna-Pillai.
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
-    </div>
-  </body>
+  </div>
+  </div>
+  </div>
+</body>
+
 </html>
